@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 3</name>
+    <events>
+        <event-block sid="849290169480565">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="301756599789322" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="748252425314363" type="bola">
+                    <param id="0" name="Object">pulse_color</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="264600289093534">
+            <conditions>
+                <condition id="2" name="Key is down" sid="292598818812325" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="141002648312963" type="pulse_color">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="893269000659937">
+            <conditions>
+                <condition id="2" name="Key is down" sid="145139818190324" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="996587137482296" type="pulse_color">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="982402034754268">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="174051175586314" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="783555991215275" type="pulse_color">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
