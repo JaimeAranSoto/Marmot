@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Event sheet 2</name>
+    <name>Eventos Portada</name>
     <events>
         <event-block sid="685211155878738">
             <conditions>
@@ -13,7 +13,7 @@
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="240304628529918" type="System">
-                    <param id="0" name="Layout">Gravedad</param>
+                    <param id="0" name="Layout">Movimientos</param>
                 </action>
             </actions>
         </event-block>

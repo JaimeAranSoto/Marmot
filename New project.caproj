@@ -422,13 +422,13 @@
         </family>
     </families>
     <layout-folder>
-        <layout>Gravedad.xml</layout>
+        <layout>Movimientos.xml</layout>
         <layout>Portada.xml</layout>
         <layout>Pulse.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
-        <event-sheet>Event sheet 2.xml</event-sheet>
+        <event-sheet>Eventos Portada.xml</event-sheet>
         <event-sheet>Eventos Pulse.xml</event-sheet>
     </event-folder>
     <global-instances>

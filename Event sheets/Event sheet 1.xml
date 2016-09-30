@@ -103,60 +103,6 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="305153563657676">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="557053934153739" type="System">
-                            <param id="0" name="Variable">medidorPulso</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">3</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform2" id="5" name="Set gravity" sid="906871377934037" type="Enemigos">
-                            <param id="0" name="Gravity">600</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="669143944473037">
-                            <conditions />
-                            <actions>
-                                <action id="-1" name="Set X" sid="825633332857987" type="Enemigos">
-                                    <param id="0" name="X">Enemigos.X + Enemigos.speed +7</param>
-                                </action>
-                                <action id="7" name="Set mirrored" sid="130952105604880" type="Enemigos">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="731609373631474">
-                            <conditions />
-                            <actions>
-                                <action id="-1" name="Set X" sid="760354572531915" type="Enemigos">
-                                    <param id="0" name="X">Enemigos.X - Enemigos.speed -7</param>
-                                </action>
-                                <action id="7" name="Set mirrored" sid="228853105304201" type="Enemigos">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="268287344354365">
-                            <conditions />
-                            <actions>
-                                <action id="-2" name="Set Y" sid="226767005236703" type="Enemigos">
-                                    <param id="0" name="Y">Enemigos.Y + Enemigos.speed +4</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="607988762674534">
-                            <conditions />
-                            <actions>
-                                <action id="-2" name="Set Y" sid="328170504374792" type="Enemigos">
-                                    <param id="0" name="Y">Enemigos.Y-Enemigos.speed-4</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <event-block sid="431695653098684">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="695117038156051" type="System">
@@ -212,20 +158,6 @@
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="146779589221208">
-                    <conditions />
-                    <actions>
-                        <action id="-3" name="Create object" sid="897913758895687" type="System">
-                            <param id="0" name="Object to create">wena</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">Enemigos.X</param>
-                            <param id="3" name="Y">Enemigos.Y-50</param>
-                        </action>
-                        <action behavior="Platform2" id="7" name="Simulate control" sid="616868187778402" type="Enemigos">
-                            <param id="0" name="Control">2</param>
-                        </action>
-                    </actions>
                 </event-block>
             </sub-events>
         </event-block>
