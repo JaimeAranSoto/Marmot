@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Event sheet 3</name>
+    <name>Eventos Pulse</name>
     <events>
-        <event-block sid="849290169480565">
+        <event-block disabled="1" sid="849290169480565">
             <conditions>
                 <condition id="-1" name="Every tick" sid="301756599789322" type="System" />
             </conditions>
@@ -47,6 +47,17 @@
             <actions>
                 <action behavior="Platform" id="7" name="Simulate control" sid="783555991215275" type="pulse_color">
                     <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="305494264553448">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="399791538040191" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="546750739007522" type="bola">
+                    <param id="0" name="Pin to">pulse_color</param>
+                    <param id="1" name="Mode">3</param>
                 </action>
             </actions>
         </event-block>

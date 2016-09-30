@@ -20,7 +20,9 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -124,18 +126,26 @@
             </object-type>
             <object-type name="bola" sid="368416872578190">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="556771340990585">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="856692457084732">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="602736469186198" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\samsung\Documents\Desarrollo de Videojuegos\Semestre 2\Taller Inicial de Video Juegos\Nova Assault\arte\pulse\bola.png">
+                        <frame duration="1" hotspotX="0.475" hotspotY="0.5125" original-source="C:\Users\samsung\Documents\Desarrollo de Videojuegos\Semestre 2\Taller Inicial de Video Juegos\Nova Assault\arte\pulse\bola.png">
                             <collision-poly>
-                                <point x="0.223438" y="0.223438" />
-                                <point x="0.5" y="0.100781" />
-                                <point x="0.784375" y="0.215625" />
-                                <point x="0.9" y="0.5" />
-                                <point x="0.777344" y="0.777344" />
-                                <point x="0.5" y="0.885156" />
-                                <point x="0.230469" y="0.769531" />
-                                <point x="0.139844" y="0.5" />
+                                <point x="0.0397469" y="0.0819344" />
+                                <point x="0.471875" y="0" />
+                                <point x="0.916211" y="0.0697265" />
+                                <point x="1" y="0.514063" />
+                                <point x="0.905225" y="0.947412" />
+                                <point x="0.471875" y="1" />
+                                <point x="0.0507328" y="0.935205" />
+                                <point x="0" y="0.514063" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -145,16 +155,16 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="696276196473276" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\samsung\Documents\Desarrollo de Videojuegos\Semestre 2\Taller Inicial de Video Juegos\Nova Assault\arte\pulse\bola.png">
+                        <frame duration="1" hotspotX="0.475" hotspotY="0.5125" original-source="C:\Users\samsung\Documents\Desarrollo de Videojuegos\Semestre 2\Taller Inicial de Video Juegos\Nova Assault\arte\pulse\bola.png">
                             <collision-poly>
-                                <point x="0.223438" y="0.223438" />
-                                <point x="0.5" y="0.100781" />
-                                <point x="0.784375" y="0.215625" />
-                                <point x="0.9" y="0.5" />
-                                <point x="0.777344" y="0.777344" />
-                                <point x="0.5" y="0.885156" />
-                                <point x="0.230469" y="0.769531" />
-                                <point x="0.139844" y="0.5" />
+                                <point x="0.0397469" y="0.0819344" />
+                                <point x="0.471875" y="0" />
+                                <point x="0.916211" y="0.0697265" />
+                                <point x="1" y="0.514063" />
+                                <point x="0.905225" y="0.947412" />
+                                <point x="0.471875" y="1" />
+                                <point x="0.0507328" y="0.935205" />
+                                <point x="0" y="0.514063" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -188,12 +198,12 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="835247754048649" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.203125" y="0.101563" />
-                            <point x="0.78125" y="0.21875" />
-                            <point x="0.835938" y="0.5" />
-                            <point x="0.84375" y="0.976563" />
-                            <point x="0.164063" y="0.945313" />
-                            <point x="0.164063" y="0.476563" />
+                            <point x="0.796875" y="0.898437" />
+                            <point x="0.21875" y="0.78125" />
+                            <point x="0.164062" y="0.5" />
+                            <point x="0.15625" y="0.023437" />
+                            <point x="0.835937" y="0.054687" />
+                            <point x="0.835937" y="0.523437" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -306,7 +316,14 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="534626062878055" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -328,7 +345,14 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="882622372934732" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -440,12 +464,12 @@
     <layout-folder>
         <layout>Gravedad.xml</layout>
         <layout>Portada.xml</layout>
-        <layout>Layout 1.xml</layout>
+        <layout>Pulse.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Event sheet 2.xml</event-sheet>
-        <event-sheet>Event sheet 3.xml</event-sheet>
+        <event-sheet>Eventos Pulse.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="5" />
