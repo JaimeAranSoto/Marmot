@@ -52,7 +52,7 @@
         <prop name="Orientations">Landscape</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
-        <prop name="Preview browser">NW.js</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -176,6 +176,51 @@
                                 <point x="0.471875" y="1" />
                                 <point x="0" y="1" />
                                 <point x="0" y="0.276563" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+<<<<<<< HEAD
+            <object-type name="Tiempoespacio" sid="843833249151801">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268091873401760" speed="5">
+                        <frame duration="1" hotspotX="0.492" hotspotY="0.548" original-source="C:\Users\Ignit\Pictures\TS_sinfondo.png">
+                            <image-point name="shoot" x="0.7" y="0.44" />
+                            <image-point name="Portal" x="1.004" y="0.496" />
+                            <collision-poly>
+                                <point x="0.300948" y="0.124751" />
+                                <point x="0.441934" y="0" />
+                                <point x="0.701422" y="0.0688623" />
+                                <point x="0.78436" y="0.5" />
+                                <point x="0.780806" y="0.692615" />
+                                <point x="0.701422" y="0.992016" />
+                                <point x="0.295024" y="0.98004" />
+=======
+            <object-type name="tank" sid="952085298325182">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="272904479495008">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="ScrollTo" sid="673437374931615">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="331842716387365" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\samsung\Documents\Desarrollo de Videojuegos\Semestre 2\Taller Inicial de Video Juegos\Nova Assault\proyecto\Marmot\arte\tank\tank.png">
+                            <collision-poly>
+                                <point x="0.266" y="0.178" />
+                                <point x="0.5" y="0.106" />
+                                <point x="0.762" y="0.238" />
+                                <point x="0.755" y="0.5" />
+                                <point x="0.64" y="0.924" />
+                                <point x="0.496" y="0.922" />
+                                <point x="0.334" y="0.93" />
+                                <point x="0.248" y="0.5" />
+>>>>>>> origin/master
                             </collision-poly>
                         </frame>
                     </animation>
@@ -434,6 +479,7 @@
         <object-type name="Gamepad" sid="317490685409506">
             <plugin id="gamepad" />
         </object-type>
+<<<<<<< HEAD
         <object-type name="healer" sid="611301559883486">
             <plugin id="Sprite" />
             <animation-folder>
@@ -466,6 +512,34 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="856497373077467" speed="5">
                     <frame duration="1" hotspotX="0.483871" hotspotY="0.466667" />
+=======
+        <object-type name="Portal_Ball" sid="685620512531015">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="965096081832321">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="194031748357162" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Portal1" sid="667442331517688">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="393921343138868" speed="5">
+                    <frame duration="1" hotspotX="0.448" hotspotY="0.764" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Portal_2" sid="479310513711572">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="362529974117267" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+>>>>>>> origin/master
                 </animation>
             </animation-folder>
         </object-type>
@@ -491,6 +565,11 @@
                 <member>healer</member>
                 <member>ply_pulso</member>
                 <member>pulse_color</member>
+<<<<<<< HEAD
+                <member>Tiempoespacio</member>
+=======
+                <member>tank</member>
+>>>>>>> origin/master
             </members>
             <instance-variables>
                 <instance-variable comment="Identificador del joystick" name="Joystick" sid="627546277565187" type="number" />
@@ -510,13 +589,29 @@
         <layout>Movimientos.xml</layout>
         <layout>Portada.xml</layout>
         <layout>Pulse.xml</layout>
+<<<<<<< HEAD
         <layout>Life.xml</layout>
+=======
+<<<<<<< HEAD
+        <layout>Time Space.xml</layout>
+=======
+        <layout>Tank.xml</layout>
+>>>>>>> origin/master
+>>>>>>> origin/master
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Eventos Portada.xml</event-sheet>
         <event-sheet>Eventos Pulse.xml</event-sheet>
+<<<<<<< HEAD
         <event-sheet>Event sheet 2.xml</event-sheet>
+=======
+<<<<<<< HEAD
+        <event-sheet>Eventos TS.xml</event-sheet>
+=======
+        <event-sheet>Eventos Tank.xml</event-sheet>
+>>>>>>> origin/master
+>>>>>>> origin/master
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="5" />
