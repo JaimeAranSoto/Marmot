@@ -78,11 +78,29 @@
                 <action behavior="8Direction" id="8" name="Set enabled" sid="688274357555821" type="bola">
                     <param id="0" name="State">1</param>
                 </action>
+                <action behavior="Platform" id="1" name="Set max speed" sid="740044767163841" type="pulse_color">
+                    <param id="0" name="Max Speed">0</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="975937937383844" type="bola">
+                    <param id="0" name="Speed">400</param>
+                </action>
             </actions>
         </event-block>
-        <event-block sid="778321974260247">
+        <event-block any="1" sid="778321974260247">
             <conditions>
-                <condition id="-22" name="Else" sid="720800874158418" type="System" />
+                <condition id="3" name="On key released" sid="720800874158418" type="Keyboard">
+                    <param id="0" name="Key">83 (S)</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="530594361617263" type="System">
+                    <param id="0" name="First value">abs(bola.X-pulse_color.X)</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">420</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="327678384083408" type="System">
+                    <param id="0" name="First value">abs(bola.Y-pulse_color.Y)</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">300</param>
+                </condition>
             </conditions>
             <actions>
                 <action behavior="8Direction" id="2" name="Set ignoring input" sid="715119594155363" type="bola">
@@ -91,6 +109,12 @@
                 <action id="-22" name="Set angle toward position" sid="909895206026148" type="bola">
                     <param id="0" name="X">pulse_color.X</param>
                     <param id="1" name="Y">pulse_color.Y</param>
+                </action>
+                <action behavior="Platform" id="1" name="Set max speed" sid="633375142340900" type="pulse_color">
+                    <param id="0" name="Max Speed">330</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="154250402727253" type="bola">
+                    <param id="0" name="Speed">800</param>
                 </action>
             </actions>
         </event-block>
