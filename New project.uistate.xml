@@ -11,10 +11,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="1">Movimientos</layout>
-        <layout active="1" order="3">Pulse</layout>
+        <layout order="3">Pulse</layout>
         <event-sheet order="0">Eventos Portada</event-sheet>
         <event-sheet order="2">Event sheet 1</event-sheet>
-        <event-sheet order="4">Eventos Pulse</event-sheet>
+        <event-sheet active="1" order="4">Eventos Pulse</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -30,6 +30,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="object-folder/mapa/" />
         <folder expanded="1" path="object-folder/Player/" />
+        <folder expanded="1" path="object-folder/coli/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
@@ -39,10 +40,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/90247_wallpaper/" />
         <folder expanded="1" path="animation-folder/Solidos/" />
         <folder expanded="1" path="animation-folder/monstericonpng/" />
-        <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/pulse_color/" />
         <folder expanded="1" path="animation-folder/bola/" />
-        <folder expanded="1" path="animation-folder/bola2/" />
+        <folder expanded="1" path="animation-folder/bola_coli/" />
+        <folder expanded="1" path="animation-folder/repel/" />
+        <folder expanded="1" path="animation-folder/implo/" />
         <folder expanded="1" path="animation-folder/Bubu/" />
         <folder expanded="1" path="animation-folder/ply_pulso/" />
         <folder expanded="1" path="animation-folder/plat_1/" />

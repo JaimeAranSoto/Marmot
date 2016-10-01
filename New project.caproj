@@ -21,6 +21,7 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
@@ -79,6 +80,14 @@
             </object-type>
             <object-type name="monstericonpng" sid="252710118264545">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="407137352036812">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="Platform" sid="181049807710542">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="525396344560213" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\samsung\Documents\Desarrollo de Videojuegos\Semestre 2\Taller Inicial de Video Juegos\Nova Assault\arte\monster-icon-png-17.png">
@@ -96,14 +105,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Sprite" sid="481358006457671">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="736516876551087" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
         </object-folder>
         <object-folder name="Player">
             <object-type name="pulse_color" sid="197350075741080">
@@ -114,6 +115,9 @@
                     </behavior-type>
                     <behavior-type name="Platform" sid="590285443990725">
                         <behavior id="Platform" />
+                    </behavior-type>
+                    <behavior-type name="Physics" sid="631640861831598">
+                        <behavior id="Physics" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -166,20 +170,60 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="bola2" sid="464533329081983">
+            <object-type name="bola_coli" sid="464533329081983">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="696276196473276" speed="5">
                         <frame duration="1" hotspotX="0.475" hotspotY="0.5125" original-source="C:\Users\samsung\Documents\Desarrollo de Videojuegos\Semestre 2\Taller Inicial de Video Juegos\Nova Assault\arte\pulse\bola.png">
                             <collision-poly>
-                                <point x="0.0397469" y="0.0819344" />
-                                <point x="0.471875" y="0" />
-                                <point x="0.916211" y="0.0697265" />
-                                <point x="1" y="0.514063" />
-                                <point x="0.905225" y="0.947412" />
+                                <point x="0" y="0" />
+                                <point x="0.534375" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.664063" />
+                                <point x="1" y="1" />
                                 <point x="0.471875" y="1" />
-                                <point x="0.0507328" y="0.935205" />
-                                <point x="0" y="0.514063" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.276563" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="coli">
+            <object-type name="repel" sid="551355544990104">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="473694654913281" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.168" y="0.168" />
+                                <point x="0.5" y="0.02" />
+                                <point x="0.84" y="0.16" />
+                                <point x="0.976" y="0.5" />
+                                <point x="0.828" y="0.828" />
+                                <point x="0.5" y="0.956" />
+                                <point x="0.18" y="0.82" />
+                                <point x="0.04" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="implo" sid="427445722885512">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="281231486852247" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.164" y="0.164" />
+                                <point x="0.5" y="0.02" />
+                                <point x="0.84" y="0.16" />
+                                <point x="0.976" y="0.5" />
+                                <point x="0.832" y="0.832" />
+                                <point x="0.5" y="0.968" />
+                                <point x="0.172" y="0.828" />
+                                <point x="0.032" y="0.5" />
                             </collision-poly>
                         </frame>
                     </animation>

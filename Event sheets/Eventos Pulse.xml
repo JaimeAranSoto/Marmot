@@ -3,124 +3,289 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Eventos Pulse</name>
     <events>
-        <event-block sid="297114015845459">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="611306480218485" type="System" />
-            </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="558740806492901" type="bola2">
-                    <param id="0" name="X">pulse_color.X</param>
-                    <param id="1" name="Y">pulse_color.Y</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="264600289093534">
-            <conditions>
-                <condition id="2" name="Key is down" sid="292598818812325" type="Keyboard">
-                    <param id="0" name="Key">39 (Right arrow)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="141002648312963" type="pulse_color">
-                    <param id="0" name="Control">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="893269000659937">
-            <conditions>
-                <condition id="2" name="Key is down" sid="145139818190324" type="Keyboard">
-                    <param id="0" name="Key">37 (Left arrow)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="996587137482296" type="pulse_color">
-                    <param id="0" name="Control">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="982402034754268">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="174051175586314" type="Keyboard">
-                    <param id="0" name="Key">65 (A)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="783555991215275" type="pulse_color">
-                    <param id="0" name="Control">2</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="305494264553448">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="399791538040191" type="System" />
-            </conditions>
-            <actions>
-                <action behavior="Pin" id="0" name="Pin to object" sid="546750739007522" type="bola">
-                    <param id="0" name="Pin to">pulse_color</param>
-                    <param id="1" name="Mode">3</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="863689517764929">
-            <conditions>
-                <condition id="2" name="Key is down" sid="980221367554774" type="Keyboard">
-                    <param id="0" name="Key">83 (S)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="8Direction" id="2" name="Set ignoring input" sid="294891075869579" type="bola">
-                    <param id="0" name="Input">0</param>
-                </action>
-                <action behavior="Bullet" id="5" name="Set enabled" sid="227630319408882" type="bola">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action behavior="Bullet" id="0" name="Set speed" sid="219428990505833" type="bola">
-                    <param id="0" name="Speed">400</param>
-                </action>
-                <action behavior="Pin" id="1" name="Unpin" sid="587509623106982" type="bola" />
-                <action behavior="8Direction" id="8" name="Set enabled" sid="688274357555821" type="bola">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action id="11" name="Set collisions enabled" sid="259633939101572" type="bola2">
-                    <param id="0" name="Collisions">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="778321974260247">
-            <conditions>
-                <condition id="-22" name="Else" sid="720800874158418" type="System" />
-            </conditions>
-            <actions>
-                <action behavior="8Direction" id="2" name="Set ignoring input" sid="715119594155363" type="bola">
-                    <param id="0" name="Input">1</param>
-                </action>
-                <action behavior="Bullet" id="0" name="Set speed" sid="374368451229719" type="bola">
-                    <param id="0" name="Speed">700</param>
-                </action>
-                <action id="-22" name="Set angle toward position" sid="909895206026148" type="bola">
-                    <param id="0" name="X">pulse_color.X</param>
-                    <param id="1" name="Y">pulse_color.Y</param>
-                </action>
-                <action id="11" name="Set collisions enabled" sid="234815913243956" type="bola2">
-                    <param id="0" name="Collisions">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="970368273241438">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="136079174220988" type="bola">
-                    <param id="0" name="Object">bola2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Pin" id="0" name="Pin to object" sid="448141249441715" type="bola">
-                    <param id="0" name="Pin to">pulse_color</param>
-                    <param id="1" name="Mode">3</param>
-                </action>
-                <action behavior="Bullet" id="5" name="Set enabled" sid="313796827455266" type="bola">
-                    <param id="0" name="State">0</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="735573690732238" title="Movimiento Bola">
+            <sub-events>
+                <event-block sid="297114015845459">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="611306480218485" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="558740806492901" type="bola_coli">
+                            <param id="0" name="Object">pulse_color</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="527921736256988" type="implo">
+                            <param id="0" name="X">bola.X</param>
+                            <param id="1" name="Y">bola.Y</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="377959125574359" type="repel">
+                            <param id="0" name="X">bola.X</param>
+                            <param id="1" name="Y">bola.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="264600289093534">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="292598818812325" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="141002648312963" type="pulse_color">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="893269000659937">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="145139818190324" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="996587137482296" type="pulse_color">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="982402034754268">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="174051175586314" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="783555991215275" type="pulse_color">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="305494264553448">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="399791538040191" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="546750739007522" type="bola">
+                            <param id="0" name="Pin to">pulse_color</param>
+                            <param id="1" name="Mode">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="863689517764929">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="980221367554774" type="Keyboard">
+                            <param id="0" name="Key">83 (S)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="688274357555821" type="bola">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="8Direction" id="2" name="Set ignoring input" sid="294891075869579" type="bola">
+                            <param id="0" name="Input">0</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="463872658169930" type="bola_coli">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="227630319408882" type="bola">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="219428990505833" type="bola">
+                            <param id="0" name="Speed">400</param>
+                        </action>
+                        <action behavior="Pin" id="1" name="Unpin" sid="587509623106982" type="bola" />
+                    </actions>
+                </event-block>
+                <event-block sid="581403511575788">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="160345148518142" type="Keyboard">
+                            <param id="0" name="Key">83 (S)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Set object time scale" sid="330268232429594" type="System">
+                            <param id="0" name="Object">pulse_color</param>
+                            <param id="1" name="Time scale">0.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="250752573428136">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="756000301698837" type="Keyboard">
+                            <param id="0" name="Key">83 (S)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Set object time scale" sid="248259745443615" type="System">
+                            <param id="0" name="Object">pulse_color</param>
+                            <param id="1" name="Time scale">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="970368273241438">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="136079174220988" type="bola">
+                            <param id="0" name="Object">bola_coli</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="448141249441715" type="bola">
+                            <param id="0" name="Pin to">pulse_color</param>
+                            <param id="1" name="Mode">3</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="313796827455266" type="bola">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="478215129001332" type="bola">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="549743110162775">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="687511983546139" type="System">
+                            <param id="0" name="First value">distance(bola.X,bola.Y,pulse_color.X,pulse_color.Y)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Set object time scale" sid="804755280472736" type="System">
+                            <param id="0" name="Object">bola</param>
+                            <param id="1" name="Time scale">0.1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="299193950306033" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-14" name="Set object time scale" sid="771971878694778" type="System">
+                            <param id="0" name="Object">bola</param>
+                            <param id="1" name="Time scale">1</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="227316844914081" type="bola_coli">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                        <action behavior="8Direction" id="2" name="Set ignoring input" sid="951868789371859" type="bola">
+                            <param id="0" name="Input">1</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="348230670679499" type="bola">
+                            <param id="0" name="Speed">1000</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" sid="474344020101199" type="bola">
+                            <param id="0" name="X">pulse_color.X</param>
+                            <param id="1" name="Y">pulse_color.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="299510449086511" title="Efecto Bola">
+            <sub-events>
+                <event-block sid="920027316491627">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="581023579358693" type="Keyboard">
+                            <param id="0" name="Key">81 (Q)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="594308461775451" type="implo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="355555118934012" type="implo">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="242789220066048" type="bola">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="416675094308695" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="650417826949557" type="implo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="698004662565105" type="implo">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="937359464910227" type="bola">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="886991678649179">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="998490103796661" type="Keyboard">
+                            <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="721158184849260" type="repel">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="263479260036738" type="repel">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="534858330238702" type="bola">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="474962082560488" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="483875385927445" type="repel">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="591315066813888" type="repel">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="400854125265265" type="bola">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="417352651948729">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="437444425050775" type="monstericonpng">
+                            <param id="0" name="Object">repel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="4" name="Apply impulse towards position" sid="675843743343947" type="monstericonpng">
+                            <param id="0" name="Impulse">-500</param>
+                            <param id="1" name="X">bola.X</param>
+                            <param id="2" name="Y">bola.Y</param>
+                            <param id="3" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="740469488116939">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="140190848085294" type="monstericonpng">
+                            <param id="0" name="Object">implo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="4" name="Apply impulse towards position" sid="831136314317142" type="monstericonpng">
+                            <param id="0" name="Impulse">500</param>
+                            <param id="1" name="X">bola.X</param>
+                            <param id="2" name="Y">bola.Y</param>
+                            <param id="3" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="150198433249186">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="202388158729310" type="pulse_color">
+                            <param id="0" name="Object">repel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="4" name="Apply impulse towards position" sid="940897841553206" type="pulse_color">
+                            <param id="0" name="Impulse">-500</param>
+                            <param id="1" name="X">bola.X</param>
+                            <param id="2" name="Y">bola.Y</param>
+                            <param id="3" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
