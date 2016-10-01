@@ -189,6 +189,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
+<<<<<<< HEAD
             <object-type name="Tiempoespacio" sid="843833249151801">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -204,6 +205,30 @@
                                 <point x="0.780806" y="0.692615" />
                                 <point x="0.701422" y="0.992016" />
                                 <point x="0.295024" y="0.98004" />
+=======
+            <object-type name="tank" sid="952085298325182">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="272904479495008">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="ScrollTo" sid="673437374931615">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="331842716387365" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\samsung\Documents\Desarrollo de Videojuegos\Semestre 2\Taller Inicial de Video Juegos\Nova Assault\proyecto\Marmot\arte\tank\tank.png">
+                            <collision-poly>
+                                <point x="0.266" y="0.178" />
+                                <point x="0.5" y="0.106" />
+                                <point x="0.762" y="0.238" />
+                                <point x="0.755" y="0.5" />
+                                <point x="0.64" y="0.924" />
+                                <point x="0.496" y="0.922" />
+                                <point x="0.334" y="0.93" />
+                                <point x="0.248" y="0.5" />
+>>>>>>> origin/master
                             </collision-poly>
                         </frame>
                     </animation>
@@ -511,7 +536,11 @@
             <members>
                 <member>ply_pulso</member>
                 <member>pulse_color</member>
+<<<<<<< HEAD
                 <member>Tiempoespacio</member>
+=======
+                <member>tank</member>
+>>>>>>> origin/master
             </members>
             <instance-variables>
                 <instance-variable comment="Identificador del joystick" name="Joystick" sid="627546277565187" type="number" />
@@ -528,13 +557,21 @@
         <layout>Movimientos.xml</layout>
         <layout>Portada.xml</layout>
         <layout>Pulse.xml</layout>
+<<<<<<< HEAD
         <layout>Time Space.xml</layout>
+=======
+        <layout>Tank.xml</layout>
+>>>>>>> origin/master
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Eventos Portada.xml</event-sheet>
         <event-sheet>Eventos Pulse.xml</event-sheet>
+<<<<<<< HEAD
         <event-sheet>Eventos TS.xml</event-sheet>
+=======
+        <event-sheet>Eventos Tank.xml</event-sheet>
+>>>>>>> origin/master
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="5" />
