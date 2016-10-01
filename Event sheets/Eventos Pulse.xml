@@ -74,9 +74,15 @@
                 <action behavior="Bullet" id="5" name="Set enabled" sid="227630319408882" type="bola">
                     <param id="0" name="State">1</param>
                 </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="219428990505833" type="bola">
+                    <param id="0" name="Speed">400</param>
+                </action>
                 <action behavior="Pin" id="1" name="Unpin" sid="587509623106982" type="bola" />
                 <action behavior="8Direction" id="8" name="Set enabled" sid="688274357555821" type="bola">
                     <param id="0" name="State">1</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="259633939101572" type="bola2">
+                    <param id="0" name="Collisions">0</param>
                 </action>
             </actions>
         </event-block>
@@ -88,9 +94,15 @@
                 <action behavior="8Direction" id="2" name="Set ignoring input" sid="715119594155363" type="bola">
                     <param id="0" name="Input">1</param>
                 </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="374368451229719" type="bola">
+                    <param id="0" name="Speed">700</param>
+                </action>
                 <action id="-22" name="Set angle toward position" sid="909895206026148" type="bola">
                     <param id="0" name="X">pulse_color.X</param>
                     <param id="1" name="Y">pulse_color.Y</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="234815913243956" type="bola2">
+                    <param id="0" name="Collisions">1</param>
                 </action>
             </actions>
         </event-block>
