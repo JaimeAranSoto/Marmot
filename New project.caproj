@@ -461,6 +461,7 @@
         <family name="Personajes" plugin-id="Sprite" sid="840734498895679">
             <members>
                 <member>ply_pulso</member>
+                <member>pulse_color</member>
             </members>
             <instance-variables>
                 <instance-variable comment="Identificador del joystick" name="Joystick" sid="627546277565187" type="number" />
