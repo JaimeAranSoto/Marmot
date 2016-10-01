@@ -12,9 +12,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="0">Portada</layout>
         <layout order="2">Gravedad</layout>
-        <layout active="1" order="4">Pulse</layout>
+        <layout order="4">Pulse</layout>
         <event-sheet order="1">Event sheet 2</event-sheet>
-        <event-sheet order="3">Event sheet 1</event-sheet>
+        <event-sheet active="1" order="3">Event sheet 1</event-sheet>
         <event-sheet order="5">Eventos Pulse</event-sheet>
     </open-tabs>
     <properties>
@@ -47,8 +47,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Bubu/" />
         <folder expanded="1" path="animation-folder/ply_pulso/" />
         <folder expanded="1" path="animation-folder/plat_1/" />
-        <folder expanded="1" path="animation-folder/Pulso/" />
-        <folder expanded="1" path="animation-folder/AntiPulso/" />
         <folder expanded="1" path="animation-folder/NovaLogo/" />
         <folder expanded="1" path="animation-folder/Play/" />
         <folder expanded="1" path="animation-folder/Instrucciones/" />
