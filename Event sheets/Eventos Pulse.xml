@@ -3,17 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Eventos Pulse</name>
     <events>
-        <event-block disabled="1" sid="849290169480565">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="301756599789322" type="System" />
-            </conditions>
-            <actions>
-                <action id="-4" name="Set position to another object" sid="748252425314363" type="bola">
-                    <param id="0" name="Object">pulse_color</param>
-                    <param id="1" name="Image point (optional)">1</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="264600289093534">
             <conditions>
                 <condition id="2" name="Key is down" sid="292598818812325" type="Keyboard">
