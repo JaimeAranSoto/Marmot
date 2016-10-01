@@ -10,11 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">Movimientos</layout>
-        <layout order="3">Pulse</layout>
-        <event-sheet order="0">Eventos Portada</event-sheet>
-        <event-sheet order="2">Event sheet 1</event-sheet>
-        <event-sheet active="1" order="4">Eventos Pulse</event-sheet>
+        <layout order="0">Movimientos</layout>
+        <layout order="2">Pulse</layout>
+        <layout active="1" order="4">Life</layout>
+        <event-sheet order="1">Event sheet 1</event-sheet>
+        <event-sheet order="3">Eventos Pulse</event-sheet>
+        <event-sheet order="5">Event sheet 2</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -23,7 +24,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">
-        <family expanded="0" name="Enemigos" />
+        <family expanded="1" name="Enemigos" />
         <family expanded="1" name="Personajes" />
     </families-expanded>
     <folders-expanded>
@@ -56,5 +57,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/CTRL_J/" />
         <folder expanded="1" path="animation-folder/unnamed/" />
         <folder expanded="1" path="animation-folder/wena/" />
+        <folder expanded="1" path="animation-folder/healer/" />
+        <folder expanded="1" path="animation-folder/Luz/" />
     </folders-expanded>
 </c2uistate>

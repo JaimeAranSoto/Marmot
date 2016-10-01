@@ -16,6 +16,7 @@
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -84,9 +85,6 @@
                     <behavior-type name="Physics" sid="407137352036812">
                         <behavior id="Physics" />
                     </behavior-type>
-                    <behavior-type name="Platform" sid="181049807710542">
-                        <behavior id="Platform" />
-                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="525396344560213" speed="5">
@@ -110,12 +108,6 @@
             <object-type name="pulse_color" sid="197350075741080">
                 <plugin id="Sprite" />
                 <behaviors>
-                    <behavior-type name="ScrollTo" sid="627507623494886">
-                        <behavior id="scrollto" />
-                    </behavior-type>
-                    <behavior-type name="Platform" sid="590285443990725">
-                        <behavior id="Platform" />
-                    </behavior-type>
                     <behavior-type name="Physics" sid="631640861831598">
                         <behavior id="Physics" />
                     </behavior-type>
@@ -442,11 +434,47 @@
         <object-type name="Gamepad" sid="317490685409506">
             <plugin id="gamepad" />
         </object-type>
+        <object-type name="healer" sid="611301559883486">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="332040631482722" speed="5">
+                    <frame duration="1" hotspotX="0.534296" hotspotY="0.460417" original-source="C:\Users\Jaime\Documents\NOVA Assault\Marmot\arte\healer\healer.png">
+                        <collision-poly>
+                            <point x="0.241877" y="0.139583" />
+                            <point x="0.498195" y="0.0458333" />
+                            <point x="0.812274" y="0.108333" />
+                            <point x="0.909747" y="0.5" />
+                            <point x="0.768953" y="0.945834" />
+                            <point x="0.516246" y="0.847917" />
+                            <point x="0.281588" y="0.970833" />
+                            <point x="0.104693" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ProgressBar" sid="823363773949793">
+            <plugin id="progressbar" />
+        </object-type>
+        <object-type name="Luz" sid="595385956629399">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="102345975557648">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="856497373077467" speed="5">
+                    <frame duration="1" hotspotX="0.483871" hotspotY="0.466667" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Enemigos" plugin-id="Sprite" sid="413241246855906">
             <members>
                 <member>Bubu</member>
+                <member>monstericonpng</member>
             </members>
             <instance-variables>
                 <instance-variable name="speed" sid="974772118372632" type="number" />
@@ -460,6 +488,7 @@
         </family>
         <family name="Personajes" plugin-id="Sprite" sid="840734498895679">
             <members>
+                <member>healer</member>
                 <member>ply_pulso</member>
                 <member>pulse_color</member>
             </members>
@@ -471,6 +500,9 @@
                 <behavior-type name="Platform2" sid="373606274648256">
                     <behavior id="Platform" />
                 </behavior-type>
+                <behavior-type name="ScrollTo2" sid="359421977797915">
+                    <behavior id="scrollto" />
+                </behavior-type>
             </behaviors>
         </family>
     </families>
@@ -478,11 +510,13 @@
         <layout>Movimientos.xml</layout>
         <layout>Portada.xml</layout>
         <layout>Pulse.xml</layout>
+        <layout>Life.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Eventos Portada.xml</event-sheet>
         <event-sheet>Eventos Pulse.xml</event-sheet>
+        <event-sheet>Event sheet 2.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="5" />
