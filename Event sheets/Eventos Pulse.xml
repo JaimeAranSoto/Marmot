@@ -24,42 +24,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="264600289093534">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="292598818812325" type="Keyboard">
-                            <param id="0" name="Key">39 (Right arrow)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="141002648312963" type="pulse_color">
-                            <param id="0" name="Control">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="893269000659937">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="145139818190324" type="Keyboard">
-                            <param id="0" name="Key">37 (Left arrow)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="996587137482296" type="pulse_color">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="982402034754268">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="174051175586314" type="Keyboard">
-                            <param id="0" name="Key">65 (A)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="783555991215275" type="pulse_color">
-                            <param id="0" name="Control">2</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="305494264553448">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="399791538040191" type="System" />
@@ -73,8 +37,9 @@
                 </event-block>
                 <event-block sid="863689517764929">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="980221367554774" type="Keyboard">
-                            <param id="0" name="Key">83 (S)</param>
+                        <condition id="6" name="On button pressed" sid="980221367554774" type="Gamepad">
+                            <param id="0" name="Gamepad">pulse_color.Joystick</param>
+                            <param id="1" name="Button">1</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -98,8 +63,9 @@
                 </event-block>
                 <event-block sid="581403511575788">
                     <conditions>
-                        <condition id="2" name="Key is down" sid="160345148518142" type="Keyboard">
-                            <param id="0" name="Key">83 (S)</param>
+                        <condition id="3" name="Is button down" sid="160345148518142" type="Gamepad">
+                            <param id="0" name="Gamepad">pulse_color.Joystick</param>
+                            <param id="1" name="Button">1</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -111,8 +77,9 @@
                 </event-block>
                 <event-block sid="250752573428136">
                     <conditions>
-                        <condition id="3" name="On key released" sid="756000301698837" type="Keyboard">
-                            <param id="0" name="Key">83 (S)</param>
+                        <condition id="7" name="On button released" sid="756000301698837" type="Gamepad">
+                            <param id="0" name="Gamepad">pulse_color.Joystick</param>
+                            <param id="1" name="Button">1</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -146,7 +113,7 @@
                         <condition id="-8" name="Compare two values" sid="687511983546139" type="System">
                             <param id="0" name="First value">distance(bola.X,bola.Y,pulse_color.X,pulse_color.Y)</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">200</param>
+                            <param id="2" name="Second value">320</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -176,14 +143,78 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="699211545208729">
+                    <conditions>
+                        <condition id="5" name="Compare axis" sid="820552717833662" type="Gamepad">
+                            <param id="0" name="Gamepad">pulse_color.Joystick</param>
+                            <param id="1" name="Axis">0</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">-100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="248527595398905" type="bola">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="961382674205075">
+                    <conditions>
+                        <condition id="5" name="Compare axis" sid="417826255033923" type="Gamepad">
+                            <param id="0" name="Gamepad">pulse_color.Joystick</param>
+                            <param id="1" name="Axis">0</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="412252834445111" type="bola">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="848866238622571">
+                    <conditions>
+                        <condition id="5" name="Compare axis" sid="149216777394437" type="Gamepad">
+                            <param id="0" name="Gamepad">pulse_color.Joystick</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">-100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="559046504832407" type="bola">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="118540084283904">
+                    <conditions>
+                        <condition id="5" name="Compare axis" sid="955142991805066" type="Gamepad">
+                            <param id="0" name="Gamepad">pulse_color.Joystick</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="119659535124831" type="bola">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="299510449086511" title="Efecto Bola">
             <sub-events>
-                <event-block sid="920027316491627">
+                <event-block any="1" sid="920027316491627">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="581023579358693" type="Keyboard">
+                        <condition disabled="1" id="0" name="On key pressed" sid="581023579358693" type="Keyboard">
                             <param id="0" name="Key">81 (Q)</param>
+                        </condition>
+                        <condition id="6" name="On button pressed" sid="815159790231808" type="Gamepad">
+                            <param id="0" name="Gamepad">pulse_color.Joystick</param>
+                            <param id="1" name="Button">2</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -210,10 +241,14 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="886991678649179">
+                <event-block any="1" sid="886991678649179">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="998490103796661" type="Keyboard">
+                        <condition disabled="1" id="0" name="On key pressed" sid="998490103796661" type="Keyboard">
                             <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                        <condition id="6" name="On button pressed" sid="391989364468208" type="Gamepad">
+                            <param id="0" name="Gamepad">pulse_color.Joystick</param>
+                            <param id="1" name="Button">3</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -282,6 +317,59 @@
                             <param id="1" name="X">bola.X</param>
                             <param id="2" name="Y">bola.Y</param>
                             <param id="3" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="662894220399312" title="Movimiento2">
+            <sub-events>
+                <event-block sid="939571130405743">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="126872628951848" type="Gamepad">
+                            <param id="0" name="Gamepad">Personajes.Joystick</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform2" id="7" name="Simulate control" sid="423257661448576" type="Personajes">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="959293944818169">
+                    <conditions>
+                        <condition id="5" name="Compare axis" sid="525166268862871" type="Gamepad">
+                            <param id="0" name="Gamepad">Personajes.Joystick</param>
+                            <param id="1" name="Axis">0</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">-100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="202434341235761" type="Personajes">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Platform2" id="7" name="Simulate control" sid="543941735886001" type="Personajes">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="930325055422473">
+                    <conditions>
+                        <condition id="5" name="Compare axis" sid="265172089198894" type="Gamepad">
+                            <param id="0" name="Gamepad">Personajes.Joystick</param>
+                            <param id="1" name="Axis">0</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="613874750138954" type="Personajes">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Platform2" id="7" name="Simulate control" sid="891410972550486" type="Personajes">
+                            <param id="0" name="Control">1</param>
                         </action>
                     </actions>
                 </event-block>
