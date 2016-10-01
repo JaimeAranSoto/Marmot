@@ -3,6 +3,17 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Eventos Pulse</name>
     <events>
+        <event-block sid="297114015845459">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="611306480218485" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="558740806492901" type="bola2">
+                    <param id="0" name="X">pulse_color.X</param>
+                    <param id="1" name="Y">pulse_color.Y</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="264600289093534">
             <conditions>
                 <condition id="2" name="Key is down" sid="292598818812325" type="Keyboard">
@@ -47,6 +58,55 @@
                 <action behavior="Pin" id="0" name="Pin to object" sid="546750739007522" type="bola">
                     <param id="0" name="Pin to">pulse_color</param>
                     <param id="1" name="Mode">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="863689517764929">
+            <conditions>
+                <condition id="2" name="Key is down" sid="980221367554774" type="Keyboard">
+                    <param id="0" name="Key">83 (S)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="2" name="Set ignoring input" sid="294891075869579" type="bola">
+                    <param id="0" name="Input">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="227630319408882" type="bola">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Pin" id="1" name="Unpin" sid="587509623106982" type="bola" />
+                <action behavior="8Direction" id="8" name="Set enabled" sid="688274357555821" type="bola">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="778321974260247">
+            <conditions>
+                <condition id="-22" name="Else" sid="720800874158418" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="2" name="Set ignoring input" sid="715119594155363" type="bola">
+                    <param id="0" name="Input">1</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="909895206026148" type="bola">
+                    <param id="0" name="X">pulse_color.X</param>
+                    <param id="1" name="Y">pulse_color.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="970368273241438">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="136079174220988" type="bola">
+                    <param id="0" name="Object">bola2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="448141249441715" type="bola">
+                    <param id="0" name="Pin to">pulse_color</param>
+                    <param id="1" name="Mode">3</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="313796827455266" type="bola">
+                    <param id="0" name="State">0</param>
                 </action>
             </actions>
         </event-block>

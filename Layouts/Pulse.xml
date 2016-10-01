@@ -109,35 +109,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Solidos" uid="40">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>336</x>
-                        <y>795.297180176</y>
-                        <z>0</z>
-                        <width>130.421539307</width>
-                        <height>274.225860596</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Solidos" uid="41">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -262,16 +233,37 @@
                                 <period-random>0</period-random>
                                 <period-offset>0</period-offset>
                                 <period-offset-random>0</period-offset-random>
-                                <magnitude>20</magnitude>
+                                <magnitude>15</magnitude>
                                 <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>400</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>360 degree (smooth)</set-angle>
+                                <default-controls>Yes</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>44</x>
-                        <y>766</y>
+                        <x>137.160171509</x>
+                        <y>789.786132813</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -313,8 +305,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>95.60131073</x>
-                        <y>814.39855957</y>
+                        <x>100.688850403</x>
+                        <y>812.944335938</y>
                         <z>0</z>
                         <width>120</width>
                         <height>120</height>
@@ -335,8 +327,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>336</x>
-                        <y>606</y>
+                        <x>727</x>
+                        <y>489</y>
                         <z>0</z>
                         <width>126.293312073</width>
                         <height>126.293312073</height>
@@ -349,7 +341,7 @@
                 </instance>
                 <instance type="bola2" uid="47">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>

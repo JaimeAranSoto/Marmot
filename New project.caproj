@@ -18,6 +18,8 @@
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
@@ -139,6 +141,12 @@
                     </behavior-type>
                     <behavior-type name="Sine" sid="856692457084732">
                         <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="8Direction" sid="584057667933656">
+                        <behavior id="EightDir" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="885352241132278">
+                        <behavior id="Bullet" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
