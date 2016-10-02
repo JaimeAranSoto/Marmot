@@ -594,7 +594,6 @@
         <family name="Personajes" plugin-id="Sprite" sid="840734498895679">
             <members>
                 <member>healer</member>
-                <member>ply_pulso</member>
                 <member>pulse_color</member>
                 <member>tank</member>
                 <member>Tiempoespacio</member>
@@ -626,7 +625,7 @@
     </layout-folder>
     <event-folder>
         <event-sheet>Eventos Portada.xml</event-sheet>
-        <event-sheet>Eventos Pulse.xml</event-sheet>
+        <event-sheet>Eventos Principal.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="5" />

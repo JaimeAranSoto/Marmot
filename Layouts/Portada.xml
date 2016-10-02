@@ -334,43 +334,6 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <instance-variables>
-                        <Joystick>0</Joystick>
-                        <Tipo>0</Tipo>
-                        <Knockback>false</Knockback>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Platform2">
-                            <properties>
-                                <max-speed>580</max-speed>
-                                <acceleration>1800</acceleration>
-                                <deceleration>1500</deceleration>
-                                <jump-strength>700</jump-strength>
-                                <gravity>1500</gravity>
-                                <max-fall-speed>1000</max-fall-speed>
-                                <double-jump>Disabled</double-jump>
-                                <jump-sustain>0</jump-sustain>
-                                <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="ScrollTo2">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Bullet">
-                            <properties>
-                                <speed>0</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>Yes</set-angle>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Flash" />
-                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="AdjustHSL">
                             <parameters>
