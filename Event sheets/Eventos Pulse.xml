@@ -407,6 +407,12 @@
                                 <action id="-13" name="Set time scale" sid="275905117379998" type="System">
                                     <param id="0" name="Time scale">0.1</param>
                                 </action>
+                                <action behavior="Bullet" disabled="1" id="0" name="Set speed" sid="126983109388731" type="Tiempoespacio">
+                                    <param id="0" name="Speed">0</param>
+                                </action>
+                                <action disabled="1" id="-8" name="Set angle" sid="216698478235231" type="Personajes">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
                                 <action id="-14" name="Set object time scale" sid="730676173121735" type="System">
                                     <param id="0" name="Object">Tiempoespacio</param>
                                     <param id="1" name="Time scale">1.0</param>
@@ -414,6 +420,10 @@
                                 <action id="-14" name="Set object time scale" sid="472636628246576" type="System">
                                     <param id="0" name="Object">Portal_Ball</param>
                                     <param id="1" name="Time scale">1.0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="673889975142460" type="Tiempoespacio">
+                                    <param id="0" name="Instance variable">TimeStopped</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -427,6 +437,10 @@
                             <actions>
                                 <action id="-13" name="Set time scale" sid="795533070708017" type="System">
                                     <param id="0" name="Time scale">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="826703415627300" type="Tiempoespacio">
+                                    <param id="0" name="Instance variable">TimeStopped</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -668,6 +682,12 @@
                                 <condition id="0" name="On collision with another object" sid="918361509930307" type="Personajes">
                                     <param id="0" name="Object">Enemigos</param>
                                 </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="478252441468151" type="Tiempoespacio">
+                                    <param id="0" name="Instance variable">TimeStopped</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="216775496974093" type="Personajes">
+                                    <param id="0" name="Instance variable">Knockback</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="ScrollTo2" id="0" name="Shake" sid="956820611023664" type="Personajes">
@@ -681,6 +701,40 @@
                                 </action>
                                 <action id="3" name="Set progress" sid="629921198640804" type="ProgressBar">
                                     <param id="0" name="Value">Vida</param>
+                                </action>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="530416041577441" type="Personajes">
+                                    <param id="0" name="Speed">800</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="891015734646820" type="Personajes">
+                                    <param id="0" name="Angle">angle(Enemigos.X,Enemigos.Y,Personajes.X,Personajes.Y)</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="224810428847355" type="System">
+                                    <param id="0" name="Time scale">1.0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="967055835259538" type="Personajes">
+                                    <param id="0" name="Instance variable">Knockback</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="990276238668454" type="Personajes">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">2.25</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="894311282520105" type="System">
+                                    <param id="0" name="Seconds">0.25</param>
+                                </action>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="614038908255658" type="Personajes">
+                                    <param id="0" name="Speed">0</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="136233609238461" type="Personajes">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="859802112444000" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="487728140714631" type="Personajes">
+                                    <param id="0" name="Instance variable">Knockback</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                             <sub-events>

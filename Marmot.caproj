@@ -22,6 +22,7 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
@@ -52,7 +53,7 @@
         <prop name="Orientations">Landscape</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
-        <prop name="Preview browser">NW.js</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -201,6 +202,46 @@
                                 <point x="0.472325" y="0.975877" />
                                 <point x="0.173432" y="0.984649" />
                                 <point x="0.0147601" y="0.513158" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Tiempoespacio" sid="256137432202998">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="TimeStopped" sid="509892974269035" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="754619983755270" speed="5">
+                        <frame duration="1" hotspotX="0.511392" hotspotY="0.547809" original-source="C:\Users\Ignit\Pictures\TS_sinfondo.png">
+                            <image-point name="shoot" x="0.774684" y="0.440239" />
+                            <image-point name="Portal" x="1.15949" y="0.496016" />
+                            <collision-poly>
+                                <point x="0.269554" y="0.126246" />
+                                <point x="0.448018" y="0.00199203" />
+                                <point x="0.735978" y="0.0665959" />
+                                <point x="0.720788" y="0.990056" />
+                                <point x="0.262056" y="0.978128" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="healer" sid="256626115964045">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="488059384016988" speed="5">
+                        <frame duration="1" hotspotX="0.534296" hotspotY="0.460417" original-source="C:\Users\Jaime\Documents\NOVA Assault\Marmot\arte\healer\healer.png">
+                            <collision-poly>
+                                <point x="0.241877" y="0.139583" />
+                                <point x="0.498195" y="0.0458333" />
+                                <point x="0.812274" y="0.108333" />
+                                <point x="0.909747" y="0.5" />
+                                <point x="0.768953" y="0.945834" />
+                                <point x="0.516246" y="0.847917" />
+                                <point x="0.281588" y="0.970833" />
+                                <point x="0.104693" y="0.5" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -459,25 +500,6 @@
         <object-type name="Gamepad" sid="317490685409506">
             <plugin id="gamepad" />
         </object-type>
-        <object-type name="healer" sid="256626115964045">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="488059384016988" speed="5">
-                    <frame duration="1" hotspotX="0.534296" hotspotY="0.460417" original-source="C:\Users\Jaime\Documents\NOVA Assault\Marmot\arte\healer\healer.png">
-                        <collision-poly>
-                            <point x="0.241877" y="0.139583" />
-                            <point x="0.498195" y="0.0458333" />
-                            <point x="0.812274" y="0.108333" />
-                            <point x="0.909747" y="0.5" />
-                            <point x="0.768953" y="0.945834" />
-                            <point x="0.516246" y="0.847917" />
-                            <point x="0.281588" y="0.970833" />
-                            <point x="0.104693" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Luz" sid="964575385434450">
             <plugin id="Sprite" />
             <behaviors>
@@ -540,26 +562,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Tiempoespacio" sid="256137432202998">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="754619983755270" speed="5">
-                    <frame duration="1" hotspotX="0.511392" hotspotY="0.547809" original-source="C:\Users\Ignit\Pictures\TS_sinfondo.png">
-                        <image-point name="shoot" x="0.774684" y="0.440239" />
-                        <image-point name="Portal" x="1.15949" y="0.496016" />
-                        <collision-poly>
-                            <point x="0.269554" y="0.126246" />
-                            <point x="0.448018" y="0.00199203" />
-                            <point x="0.776484" y="0.07058" />
-                            <point x="0.881468" y="0.5" />
-                            <point x="0.87697" y="0.691848" />
-                            <point x="0.776484" y="0.990056" />
-                            <point x="0.262056" y="0.978128" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families>
         <family name="Enemigos" plugin-id="Sprite" sid="413241246855906">
@@ -591,6 +593,7 @@
             <instance-variables>
                 <instance-variable comment="Identificador del joystick" name="Joystick" sid="627546277565187" type="number" />
                 <instance-variable comment="0=Pulso 1=HP 2=TP 3=Tank" name="Tipo" sid="759535848558655" type="number" />
+                <instance-variable name="Knockback" sid="309501151732202" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform2" sid="373606274648256">
@@ -598,6 +601,12 @@
                 </behavior-type>
                 <behavior-type name="ScrollTo2" sid="974983797381691">
                     <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="669550572765597">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="204748419048738">
+                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
         </family>

@@ -69,10 +69,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>854</x>
-                        <y>705</y>
+                        <y>795</y>
                         <z>0</z>
                         <width>1774</width>
-                        <height>172</height>
+                        <height>352</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -282,8 +282,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Joystick>0</Joystick>
+                        <Joystick>1</Joystick>
                         <Tipo>0</Tipo>
+                        <Knockback>false</Knockback>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform2">
@@ -305,6 +306,17 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
                         <behavior-instance type="ScrollTo">
                             <properties>
                                 <initial-state>Enabled</initial-state>
@@ -459,6 +471,7 @@
                     <instance-variables>
                         <Joystick>2</Joystick>
                         <Tipo>0</Tipo>
+                        <Knockback>false</Knockback>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform2">
@@ -480,6 +493,17 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -695,8 +719,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Joystick>1</Joystick>
+                        <Joystick>0</Joystick>
                         <Tipo>0</Tipo>
+                        <Knockback>false</Knockback>
+                        <TimeStopped>false</TimeStopped>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform2">
@@ -718,6 +744,17 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -822,6 +859,7 @@
                     <instance-variables>
                         <Joystick>3</Joystick>
                         <Tipo>0</Tipo>
+                        <Knockback>false</Knockback>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform2">
@@ -843,6 +881,17 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
                         <behavior-instance type="Physics">
                             <properties>
                                 <immovable>No</immovable>

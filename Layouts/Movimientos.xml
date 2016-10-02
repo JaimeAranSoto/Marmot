@@ -240,6 +240,7 @@
                     <instance-variables>
                         <Joystick>0</Joystick>
                         <Tipo>0</Tipo>
+                        <Knockback>false</Knockback>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform2">
@@ -261,6 +262,17 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="AdjustHSL">
@@ -339,6 +351,7 @@
                     <instance-variables>
                         <Joystick>0</Joystick>
                         <Tipo>1</Tipo>
+                        <Knockback>false</Knockback>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform2">
@@ -360,6 +373,17 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="AdjustHSL">

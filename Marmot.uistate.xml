@@ -41,6 +41,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/bola/" />
         <folder expanded="1" path="animation-folder/bola_coli/" />
         <folder expanded="1" path="animation-folder/tank/" />
+        <folder expanded="1" path="animation-folder/Tiempoespacio/" />
+        <folder expanded="1" path="animation-folder/healer/" />
         <folder expanded="1" path="animation-folder/repel/" />
         <folder expanded="1" path="animation-folder/implo/" />
         <folder expanded="1" path="animation-folder/Bubu/" />
@@ -54,11 +56,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/CTRL_J/" />
         <folder expanded="1" path="animation-folder/unnamed/" />
         <folder expanded="1" path="animation-folder/wena/" />
-        <folder expanded="1" path="animation-folder/healer/" />
         <folder expanded="1" path="animation-folder/Luz/" />
         <folder expanded="1" path="animation-folder/Portal1/" />
         <folder expanded="1" path="animation-folder/Portal_Ball/" />
         <folder expanded="1" path="animation-folder/Portal_2/" />
-        <folder expanded="1" path="animation-folder/Tiempoespacio/" />
     </folders-expanded>
 </c2uistate>
