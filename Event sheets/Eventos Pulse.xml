@@ -35,11 +35,14 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="863689517764929">
+                <event-block any="1" sid="863689517764929">
                     <conditions>
                         <condition id="6" name="On button pressed" sid="980221367554774" type="Gamepad">
                             <param id="0" name="Gamepad">pulse_color.Joystick</param>
                             <param id="1" name="Button">1</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="498509675514784" type="Keyboard">
+                            <param id="0" name="Key">83 (S)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -61,11 +64,14 @@
                         <action behavior="Pin" id="1" name="Unpin" sid="587509623106982" type="bola" />
                     </actions>
                 </event-block>
-                <event-block sid="581403511575788">
+                <event-block any="1" sid="581403511575788">
                     <conditions>
                         <condition id="3" name="Is button down" sid="160345148518142" type="Gamepad">
                             <param id="0" name="Gamepad">pulse_color.Joystick</param>
                             <param id="1" name="Button">1</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="344995112113924" type="Keyboard">
+                            <param id="0" name="Key">83 (S)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -75,11 +81,14 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="250752573428136">
+                <event-block any="1" sid="250752573428136">
                     <conditions>
                         <condition id="7" name="On button released" sid="756000301698837" type="Gamepad">
                             <param id="0" name="Gamepad">pulse_color.Joystick</param>
                             <param id="1" name="Button">1</param>
+                        </condition>
+                        <condition id="3" name="On key released" sid="918502078501733" type="Keyboard">
+                            <param id="0" name="Key">83 (S)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -209,7 +218,7 @@
             <sub-events>
                 <event-block any="1" sid="920027316491627">
                     <conditions>
-                        <condition disabled="1" id="0" name="On key pressed" sid="581023579358693" type="Keyboard">
+                        <condition id="0" name="On key pressed" sid="581023579358693" type="Keyboard">
                             <param id="0" name="Key">81 (Q)</param>
                         </condition>
                         <condition id="6" name="On button pressed" sid="815159790231808" type="Gamepad">
@@ -243,7 +252,7 @@
                 </event-block>
                 <event-block any="1" sid="886991678649179">
                     <conditions>
-                        <condition disabled="1" id="0" name="On key pressed" sid="998490103796661" type="Keyboard">
+                        <condition id="0" name="On key pressed" sid="998490103796661" type="Keyboard">
                             <param id="0" name="Key">87 (W)</param>
                         </condition>
                         <condition id="6" name="On button pressed" sid="391989364468208" type="Gamepad">
@@ -324,11 +333,14 @@
         </event-group>
         <event-group description="" sid="662894220399312" title="Movimiento2">
             <sub-events>
-                <event-block sid="939571130405743">
+                <event-block any="1" sid="939571130405743">
                     <conditions>
                         <condition id="6" name="On button pressed" sid="126872628951848" type="Gamepad">
                             <param id="0" name="Gamepad">Personajes.Joystick</param>
                             <param id="1" name="Button">0</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="675112827145034" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -337,13 +349,16 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="959293944818169">
+                <event-block any="1" sid="959293944818169">
                     <conditions>
                         <condition id="5" name="Compare axis" sid="525166268862871" type="Gamepad">
                             <param id="0" name="Gamepad">Personajes.Joystick</param>
                             <param id="1" name="Axis">0</param>
                             <param id="2" name="Comparison">0</param>
                             <param id="3" name="Value">-100</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="714767261531339" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -355,13 +370,16 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="930325055422473">
+                <event-block any="1" sid="930325055422473">
                     <conditions>
                         <condition id="5" name="Compare axis" sid="265172089198894" type="Gamepad">
                             <param id="0" name="Gamepad">Personajes.Joystick</param>
                             <param id="1" name="Axis">0</param>
                             <param id="2" name="Comparison">0</param>
                             <param id="3" name="Value">100</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="665717470904523" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
                         </condition>
                     </conditions>
                     <actions>
