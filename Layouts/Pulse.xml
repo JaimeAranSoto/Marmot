@@ -197,7 +197,16 @@
                     </world>
                 </instance>
             </instances>
-            <effects />
+            <effects>
+                <effect-type name="Grayscale">
+                    <effect id="grayscale" />
+                    <effect-instance type="Grayscale">
+                        <parameters>
+                            <intensity>1</intensity>
+                        </parameters>
+                    </effect-instance>
+                </effect-type>
+            </effects>
         </layer>
         <layer name="juego" sid="981605009596604">
             <initially-visible>1</initially-visible>
@@ -723,6 +732,7 @@
                         <Tipo>0</Tipo>
                         <Knockback>false</Knockback>
                         <TimeStopped>false</TimeStopped>
+                        <Cooldown>true</Cooldown>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform2">
@@ -755,6 +765,7 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Flash" />
+                        <behavior-instance type="Timer" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

@@ -27,11 +27,13 @@
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
+        <effect author="Scirra" id="grayscale">Grayscale</effect>
         <effect author="Scirra" id="hsladjust">Adjust HSL</effect>
     </used-effects>
     <configurations>
@@ -211,7 +213,13 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="TimeStopped" sid="509892974269035" type="boolean" />
+                    <instance-variable name="Cooldown" sid="507076537806563" type="boolean" />
                 </instance-variables>
+                <behaviors>
+                    <behavior-type name="Timer" sid="796868717459884">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="754619983755270" speed="5">
                         <frame duration="1" hotspotX="0.511392" hotspotY="0.547809" original-source="C:\Users\Ignit\Pictures\TS_sinfondo.png">

@@ -4,6 +4,26 @@
     <name>Eventos Pulse</name>
     <events>
         <variable constant="0" name="Vida" sid="376484619455409" static="0" type="number">100</variable>
+        <event-block sid="184027508998878">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="371298559715693" type="System" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set progress" sid="611525319144878" type="ProgressBar">
+                    <param id="0" name="Value">Vida</param>
+                </action>
+                <action id="-30" name="Set layer effect enabled" sid="556862752902861" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Mode">0</param>
+                    <param id="2" name="Effect">&quot;Grayscale&quot;</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="747224123773419" type="Tiempoespacio">
+                    <param id="0" name="Duration">2</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;Cooldown&quot;</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="735573690732238" title="Movimiento Bola">
             <sub-events>
                 <event-block sid="297114015845459">
@@ -372,16 +392,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="184027508998878">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="371298559715693" type="System" />
-            </conditions>
-            <actions>
-                <action id="3" name="Set progress" sid="611525319144878" type="ProgressBar">
-                    <param id="0" name="Value">Vida</param>
-                </action>
-            </actions>
-        </event-block>
+        <comment>Estos eventos se calculan para todos los personajes y enemigos</comment>
         <event-block sid="415861118677857">
             <conditions>
                 <condition id="-11" name="For Each" sid="682217971944529" type="System">
@@ -393,7 +404,6 @@
             </conditions>
             <actions />
             <sub-events>
-                <comment>Estos eventos se calculan para todos los personajes y enemigos</comment>
                 <event-group description="" sid="214061041341525" title="Parar el tiempo">
                     <sub-events>
                         <event-block sid="377943947154829">
@@ -402,8 +412,16 @@
                                     <param id="0" name="Gamepad">Tiempoespacio.Joystick</param>
                                     <param id="1" name="Button">7</param>
                                 </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="707956447771403" type="Tiempoespacio">
+                                    <param id="0" name="Instance variable">Cooldown</param>
+                                </condition>
                             </conditions>
                             <actions>
+                                <action id="-30" name="Set layer effect enabled" sid="568995764758167" type="System">
+                                    <param id="0" name="Layer">0</param>
+                                    <param id="1" name="Mode">1</param>
+                                    <param id="2" name="Effect">&quot;Grayscale&quot;</param>
+                                </action>
                                 <action id="-13" name="Set time scale" sid="275905117379998" type="System">
                                     <param id="0" name="Time scale">0.1</param>
                                 </action>
@@ -427,20 +445,68 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="753567952603165">
+                        <event-block any="1" sid="753567952603165">
                             <conditions>
                                 <condition id="7" name="On button released" sid="264417276162116" type="Gamepad">
                                     <param id="0" name="Gamepad">Tiempoespacio.Joystick</param>
                                     <param id="1" name="Button">7</param>
                                 </condition>
+                                <condition behavior="Timer" id="0" name="On timer" sid="941700756681648" type="Tiempoespacio">
+                                    <param id="0" name="Tag">&quot;Break&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
+                                <action id="-13" name="Set boolean" sid="851712621904942" type="Tiempoespacio">
+                                    <param id="0" name="Instance variable">Cooldown</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                                 <action id="-13" name="Set time scale" sid="795533070708017" type="System">
                                     <param id="0" name="Time scale">1</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="826703415627300" type="Tiempoespacio">
                                     <param id="0" name="Instance variable">TimeStopped</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-30" name="Set layer effect enabled" sid="911336966736031" type="System">
+                                    <param id="0" name="Layer">0</param>
+                                    <param id="1" name="Mode">0</param>
+                                    <param id="2" name="Effect">&quot;Grayscale&quot;</param>
+                                </action>
+                                <action behavior="Timer" id="1" name="Stop timer" sid="529752366643610" type="Tiempoespacio">
+                                    <param id="0" name="Tag">&quot;Break&quot;</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="694547059469708" type="Tiempoespacio">
+                                    <param id="0" name="Duration">2</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;Cooldown&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="283438627173818">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="626168192906584" type="Gamepad">
+                                    <param id="0" name="Gamepad">Tiempoespacio.Joystick</param>
+                                    <param id="1" name="Button">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Timer" id="0" name="Start timer" sid="714302689912227" type="Tiempoespacio">
+                                    <param id="0" name="Duration">1.0</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;Break&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="386539217277372">
+                            <conditions>
+                                <condition behavior="Timer" id="0" name="On timer" sid="538683363128865" type="Tiempoespacio">
+                                    <param id="0" name="Tag">&quot;Cooldown&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="345499275181543" type="Tiempoespacio">
+                                    <param id="0" name="Instance variable">Cooldown</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -569,6 +635,17 @@
                 </event-group>
                 <event-group description="" sid="126947361317791" title="Reolección Vida">
                     <sub-events>
+                        <event-block sid="376596271421356">
+                            <conditions>
+                                <condition id="-5" name="Compare width" sid="412977034062354" type="Luz">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Width">80</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="532680598491570" type="Luz" />
+                            </actions>
+                        </event-block>
                         <event-block sid="446018861538024">
                             <conditions>
                                 <condition id="3" name="Is button down" sid="424971234338953" type="Gamepad">
@@ -666,17 +743,6 @@
                 </event-group>
                 <event-group description="" sid="244705012540768" title="Daño enemigos">
                     <sub-events>
-                        <event-block sid="376596271421356">
-                            <conditions>
-                                <condition id="-5" name="Compare width" sid="412977034062354" type="Luz">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="Width">80</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="532680598491570" type="Luz" />
-                            </actions>
-                        </event-block>
                         <event-block sid="143078236221977">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="918361509930307" type="Personajes">
@@ -807,6 +873,10 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="540890262927897">
+            <conditions />
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>
