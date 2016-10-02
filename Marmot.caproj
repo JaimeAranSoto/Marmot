@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>New project</name>
+    <name>Marmot</name>
     <description></description>
     <version>1.0.0.0</version>
     <author></author>
@@ -37,8 +37,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>850</width>
-        <height>480</height>
+        <width>1280</width>
+        <height>720</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -52,7 +52,7 @@
         <prop name="Orientations">Landscape</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
-        <prop name="Preview browser">Chrome</prop>
+        <prop name="Preview browser">NW.js</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -81,11 +81,6 @@
             </object-type>
             <object-type name="monstericonpng" sid="252710118264545">
                 <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Physics" sid="407137352036812">
-                        <behavior id="Physics" />
-                    </behavior-type>
-                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="525396344560213" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\samsung\Documents\Desarrollo de Videojuegos\Semestre 2\Taller Inicial de Video Juegos\Nova Assault\arte\monster-icon-png-17.png">
@@ -108,6 +103,9 @@
             <object-type name="pulse_color" sid="197350075741080">
                 <plugin id="Sprite" />
                 <behaviors>
+                    <behavior-type name="ScrollTo" sid="627507623494886">
+                        <behavior id="scrollto" />
+                    </behavior-type>
                     <behavior-type name="Physics" sid="631640861831598">
                         <behavior id="Physics" />
                     </behavior-type>
@@ -181,23 +179,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-<<<<<<< HEAD
-            <object-type name="Tiempoespacio" sid="843833249151801">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268091873401760" speed="5">
-                        <frame duration="1" hotspotX="0.492" hotspotY="0.548" original-source="C:\Users\Ignit\Pictures\TS_sinfondo.png">
-                            <image-point name="shoot" x="0.7" y="0.44" />
-                            <image-point name="Portal" x="1.004" y="0.496" />
-                            <collision-poly>
-                                <point x="0.300948" y="0.124751" />
-                                <point x="0.441934" y="0" />
-                                <point x="0.701422" y="0.0688623" />
-                                <point x="0.78436" y="0.5" />
-                                <point x="0.780806" y="0.692615" />
-                                <point x="0.701422" y="0.992016" />
-                                <point x="0.295024" y="0.98004" />
-=======
             <object-type name="tank" sid="952085298325182">
                 <plugin id="Sprite" />
                 <behaviors>
@@ -210,17 +191,16 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="331842716387365" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\samsung\Documents\Desarrollo de Videojuegos\Semestre 2\Taller Inicial de Video Juegos\Nova Assault\proyecto\Marmot\arte\tank\tank.png">
+                        <frame duration="1" hotspotX="0.479705" hotspotY="0.513158" original-source="C:\Users\samsung\Documents\Desarrollo de Videojuegos\Semestre 2\Taller Inicial de Video Juegos\Nova Assault\proyecto\Marmot\arte\tank\tank.png">
                             <collision-poly>
-                                <point x="0.266" y="0.178" />
-                                <point x="0.5" y="0.106" />
-                                <point x="0.762" y="0.238" />
-                                <point x="0.755" y="0.5" />
-                                <point x="0.64" y="0.924" />
-                                <point x="0.496" y="0.922" />
-                                <point x="0.334" y="0.93" />
-                                <point x="0.248" y="0.5" />
->>>>>>> origin/master
+                                <point x="0.0479705" y="0.160088" />
+                                <point x="0.479705" y="0.0811404" />
+                                <point x="0.9631" y="0.225877" />
+                                <point x="0.950185" y="0.513158" />
+                                <point x="0.738007" y="0.97807" />
+                                <point x="0.472325" y="0.975877" />
+                                <point x="0.173432" y="0.984649" />
+                                <point x="0.0147601" y="0.513158" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -479,11 +459,10 @@
         <object-type name="Gamepad" sid="317490685409506">
             <plugin id="gamepad" />
         </object-type>
-<<<<<<< HEAD
-        <object-type name="healer" sid="611301559883486">
+        <object-type name="healer" sid="256626115964045">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="332040631482722" speed="5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="488059384016988" speed="5">
                     <frame duration="1" hotspotX="0.534296" hotspotY="0.460417" original-source="C:\Users\Jaime\Documents\NOVA Assault\Marmot\arte\healer\healer.png">
                         <collision-poly>
                             <point x="0.241877" y="0.139583" />
@@ -499,47 +478,85 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="ProgressBar" sid="823363773949793">
-            <plugin id="progressbar" />
-        </object-type>
-        <object-type name="Luz" sid="595385956629399">
+        <object-type name="Luz" sid="964575385434450">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="Sine" sid="102345975557648">
+                <behavior-type name="Sine" sid="799701690999496">
                     <behavior id="Sin" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="856497373077467" speed="5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="532238626656272" speed="5">
                     <frame duration="1" hotspotX="0.483871" hotspotY="0.466667" />
-=======
-        <object-type name="Portal_Ball" sid="685620512531015">
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ProgressBar" sid="433389164876912">
+            <plugin id="progressbar" />
+        </object-type>
+        <object-type name="Portal1" sid="165029710401932">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="117882410812395" speed="5">
+                    <frame duration="1" hotspotX="0.506579" hotspotY="0.761905">
+                        <collision-poly>
+                            <point x="0.236842" y="0.0238095" />
+                            <point x="0.730264" y="0.0277778" />
+                            <point x="0.796053" y="0.928572" />
+                            <point x="0.328947" y="0.952381" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Portal_Ball" sid="905704979186389">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="Bullet" sid="965096081832321">
+                <behavior-type name="Bullet" sid="823272440735701">
                     <behavior id="Bullet" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="194031748357162" speed="5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="976309001280264" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Portal1" sid="667442331517688">
+        <object-type name="Portal_2" sid="726077825068571">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="393921343138868" speed="5">
-                    <frame duration="1" hotspotX="0.448" hotspotY="0.764" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="188235027062252" speed="5">
+                    <frame duration="1" hotspotX="0.592105" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.31579" y="0.0674603" />
+                            <point x="0.592105" y="0.00396825" />
+                            <point x="0.657895" y="0.289682" />
+                            <point x="0.664474" y="0.714286" />
+                            <point x="0.592105" y="0.996032" />
+                            <point x="0.276316" y="0.825397" />
+                            <point x="0.177632" y="0.515873" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Portal_2" sid="479310513711572">
+        <object-type name="Tiempoespacio" sid="256137432202998">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="362529974117267" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
->>>>>>> origin/master
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="754619983755270" speed="5">
+                    <frame duration="1" hotspotX="0.511392" hotspotY="0.547809" original-source="C:\Users\Ignit\Pictures\TS_sinfondo.png">
+                        <image-point name="shoot" x="0.774684" y="0.440239" />
+                        <image-point name="Portal" x="1.15949" y="0.496016" />
+                        <collision-poly>
+                            <point x="0.269554" y="0.126246" />
+                            <point x="0.448018" y="0.00199203" />
+                            <point x="0.776484" y="0.07058" />
+                            <point x="0.881468" y="0.5" />
+                            <point x="0.87697" y="0.691848" />
+                            <point x="0.776484" y="0.990056" />
+                            <point x="0.262056" y="0.978128" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -558,6 +575,9 @@
                 <behavior-type name="Platform2" sid="558022204847921">
                     <behavior id="Platform" />
                 </behavior-type>
+                <behavior-type name="Pin" sid="972059493719785">
+                    <behavior id="Pin" />
+                </behavior-type>
             </behaviors>
         </family>
         <family name="Personajes" plugin-id="Sprite" sid="840734498895679">
@@ -565,11 +585,8 @@
                 <member>healer</member>
                 <member>ply_pulso</member>
                 <member>pulse_color</member>
-<<<<<<< HEAD
-                <member>Tiempoespacio</member>
-=======
                 <member>tank</member>
->>>>>>> origin/master
+                <member>Tiempoespacio</member>
             </members>
             <instance-variables>
                 <instance-variable comment="Identificador del joystick" name="Joystick" sid="627546277565187" type="number" />
@@ -579,7 +596,7 @@
                 <behavior-type name="Platform2" sid="373606274648256">
                     <behavior id="Platform" />
                 </behavior-type>
-                <behavior-type name="ScrollTo2" sid="359421977797915">
+                <behavior-type name="ScrollTo2" sid="974983797381691">
                     <behavior id="scrollto" />
                 </behavior-type>
             </behaviors>
@@ -589,29 +606,13 @@
         <layout>Movimientos.xml</layout>
         <layout>Portada.xml</layout>
         <layout>Pulse.xml</layout>
-<<<<<<< HEAD
-        <layout>Life.xml</layout>
-=======
-<<<<<<< HEAD
-        <layout>Time Space.xml</layout>
-=======
         <layout>Tank.xml</layout>
->>>>>>> origin/master
->>>>>>> origin/master
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Eventos Portada.xml</event-sheet>
         <event-sheet>Eventos Pulse.xml</event-sheet>
-<<<<<<< HEAD
-        <event-sheet>Event sheet 2.xml</event-sheet>
-=======
-<<<<<<< HEAD
-        <event-sheet>Eventos TS.xml</event-sheet>
-=======
         <event-sheet>Eventos Tank.xml</event-sheet>
->>>>>>> origin/master
->>>>>>> origin/master
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="5" />

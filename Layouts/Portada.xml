@@ -299,7 +299,7 @@
                         <behavior-instance type="Platform2">
                             <properties>
                                 <max-speed>330</max-speed>
-                                <acceleration>1500</acceleration>
+                                <acceleration>6000</acceleration>
                                 <deceleration>1500</deceleration>
                                 <jump-strength>600</jump-strength>
                                 <gravity>1500</gravity>
@@ -310,6 +310,7 @@
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

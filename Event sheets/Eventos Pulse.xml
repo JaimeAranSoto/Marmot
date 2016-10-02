@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Eventos Pulse</name>
     <events>
+        <variable constant="0" name="Vida" sid="376484619455409" static="0" type="number">100</variable>
         <event-group description="" sid="735573690732238" title="Movimiento Bola">
             <sub-events>
                 <event-block sid="297114015845459">
@@ -39,7 +40,7 @@
                     <conditions>
                         <condition id="6" name="On button pressed" sid="980221367554774" type="Gamepad">
                             <param id="0" name="Gamepad">pulse_color.Joystick</param>
-                            <param id="1" name="Button">1</param>
+                            <param id="1" name="Button">7</param>
                         </condition>
                         <condition id="0" name="On key pressed" sid="498509675514784" type="Keyboard">
                             <param id="0" name="Key">83 (S)</param>
@@ -68,7 +69,7 @@
                     <conditions>
                         <condition id="3" name="Is button down" sid="160345148518142" type="Gamepad">
                             <param id="0" name="Gamepad">pulse_color.Joystick</param>
-                            <param id="1" name="Button">1</param>
+                            <param id="1" name="Button">7</param>
                         </condition>
                         <condition id="2" name="Key is down" sid="344995112113924" type="Keyboard">
                             <param id="0" name="Key">83 (S)</param>
@@ -77,7 +78,7 @@
                     <actions>
                         <action id="-14" name="Set object time scale" sid="330268232429594" type="System">
                             <param id="0" name="Object">pulse_color</param>
-                            <param id="1" name="Time scale">0.2</param>
+                            <param id="1" name="Time scale">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -85,7 +86,7 @@
                     <conditions>
                         <condition id="7" name="On button released" sid="756000301698837" type="Gamepad">
                             <param id="0" name="Gamepad">pulse_color.Joystick</param>
-                            <param id="1" name="Button">1</param>
+                            <param id="1" name="Button">7</param>
                         </condition>
                         <condition id="3" name="On key released" sid="918502078501733" type="Keyboard">
                             <param id="0" name="Key">83 (S)</param>
@@ -122,7 +123,7 @@
                         <condition id="-8" name="Compare two values" sid="687511983546139" type="System">
                             <param id="0" name="First value">distance(bola.X,bola.Y,pulse_color.X,pulse_color.Y)</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">320</param>
+                            <param id="2" name="Second value">400</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -227,6 +228,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-7" name="Set size" sid="246918567490223" type="implo">
+                            <param id="0" name="Width">100</param>
+                            <param id="1" name="Height">100</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="594308461775451" type="implo">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -261,6 +266,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-7" name="Set size" sid="736497269172282" type="repel">
+                            <param id="0" name="Width">300</param>
+                            <param id="1" name="Height">300</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="721158184849260" type="repel">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -284,114 +293,466 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="417352651948729">
+                <event-block sid="917497175011438">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="437444425050775" type="monstericonpng">
-                            <param id="0" name="Object">repel</param>
+                        <condition id="-11" name="For Each" sid="960900657459036" type="System">
+                            <param id="0" name="Object">Enemigos</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Physics" id="4" name="Apply impulse towards position" sid="675843743343947" type="monstericonpng">
-                            <param id="0" name="Impulse">-500</param>
-                            <param id="1" name="X">bola.X</param>
-                            <param id="2" name="Y">bola.Y</param>
-                            <param id="3" name="Image point">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="740469488116939">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="140190848085294" type="monstericonpng">
-                            <param id="0" name="Object">implo</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Physics" id="4" name="Apply impulse towards position" sid="831136314317142" type="monstericonpng">
-                            <param id="0" name="Impulse">500</param>
-                            <param id="1" name="X">bola.X</param>
-                            <param id="2" name="Y">bola.Y</param>
-                            <param id="3" name="Image point">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="150198433249186">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="202388158729310" type="pulse_color">
-                            <param id="0" name="Object">repel</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Physics" id="4" name="Apply impulse towards position" sid="940897841553206" type="pulse_color">
-                            <param id="0" name="Impulse">-500</param>
-                            <param id="1" name="X">bola.X</param>
-                            <param id="2" name="Y">bola.Y</param>
-                            <param id="3" name="Image point">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="680545262690849">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="666698439084938" type="Enemigos">
+                                    <param id="0" name="Object">repel</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform2" id="1" name="Set max speed" sid="808239476274733" type="Enemigos">
+                                    <param id="0" name="Max Speed">12000</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="441305073574215">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="831469807202532" type="System">
+                                            <param id="0" name="First value">Enemigos.X</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">repel.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform2" id="7" name="Simulate control" sid="342121590656422" type="Enemigos">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="381334217894151">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="641949872528516" type="System">
+                                            <param id="0" name="First value">Enemigos.X</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">repel.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform2" id="7" name="Simulate control" sid="241320803542925" type="Enemigos">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="255415499517955">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="376195657166626" type="Enemigos">
+                                    <param id="0" name="Object">repel</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform2" id="1" name="Set max speed" sid="855428189950227" type="Enemigos">
+                                    <param id="0" name="Max Speed">400</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="147079938308227">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="319999408947944" type="Enemigos">
+                                    <param id="0" name="Object">implo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="169783129590671" type="Enemigos">
+                                    <param id="0" name="Object">implo</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="662894220399312" title="Movimiento2">
+        <event-block sid="184027508998878">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="371298559715693" type="System" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set progress" sid="611525319144878" type="ProgressBar">
+                    <param id="0" name="Value">Vida</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="415861118677857">
+            <conditions>
+                <condition id="-11" name="For Each" sid="682217971944529" type="System">
+                    <param id="0" name="Object">Personajes</param>
+                </condition>
+                <condition id="-11" name="For Each" sid="107511499055779" type="System">
+                    <param id="0" name="Object">Enemigos</param>
+                </condition>
+            </conditions>
+            <actions />
             <sub-events>
-                <event-block any="1" sid="939571130405743">
+                <comment>Estos eventos se calculan para todos los personajes y enemigos</comment>
+                <event-group description="" sid="214061041341525" title="Parar el tiempo">
+                    <sub-events>
+                        <event-block sid="377943947154829">
+                            <conditions>
+                                <condition id="3" name="Is button down" sid="716281784138074" type="Gamepad">
+                                    <param id="0" name="Gamepad">Tiempoespacio.Joystick</param>
+                                    <param id="1" name="Button">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="275905117379998" type="System">
+                                    <param id="0" name="Time scale">0.1</param>
+                                </action>
+                                <action id="-14" name="Set object time scale" sid="730676173121735" type="System">
+                                    <param id="0" name="Object">Tiempoespacio</param>
+                                    <param id="1" name="Time scale">1.0</param>
+                                </action>
+                                <action id="-14" name="Set object time scale" sid="472636628246576" type="System">
+                                    <param id="0" name="Object">Portal_Ball</param>
+                                    <param id="1" name="Time scale">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="753567952603165">
+                            <conditions>
+                                <condition id="7" name="On button released" sid="264417276162116" type="Gamepad">
+                                    <param id="0" name="Gamepad">Tiempoespacio.Joystick</param>
+                                    <param id="1" name="Button">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="795533070708017" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="966644958366638" title="Portales">
+                    <sub-events>
+                        <event-block sid="491574587427901">
+                            <conditions>
+                                <condition id="7" name="On button released" sid="598530944535235" type="Gamepad">
+                                    <param id="0" name="Gamepad">Tiempoespacio.Joystick</param>
+                                    <param id="1" name="Button">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="305479768516607" type="Portal_Ball">
+                                    <param id="0" name="Object">Tiempoespacio</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="174045847466694" type="Portal_Ball">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="104152962861199" type="Portal_Ball">
+                                    <param id="0" name="Speed">700</param>
+                                </action>
+                                <action behavior="Bullet" id="2" name="Set gravity" sid="439891646441928" type="Portal_Ball">
+                                    <param id="0" name="Gravity">400</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="246864676218090">
+                                    <conditions>
+                                        <condition id="7" name="Is mirrored" sid="759724824731583" type="Tiempoespacio" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="523274698923031" type="Portal_Ball">
+                                            <param id="0" name="Angle">-180</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="136712026643676">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="654255238637303" type="Tiempoespacio" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="710618114174518" type="Portal_Ball">
+                                            <param id="0" name="Angle">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="847586523540487">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="160372150853477" type="Portal_Ball">
+                                    <param id="0" name="Object">Solidos</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="577522154752221" type="Portal_2">
+                                    <param id="0" name="Object">Tiempoespacio</param>
+                                    <param id="1" name="Image point (optional)">2</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="751441518457567" type="Portal1">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="404792535032531" type="Portal1">
+                                    <param id="0" name="Object">Portal_Ball</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="485584668821504" type="Portal_2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="791367320946880" type="Portal_Ball" />
+                                <action behavior="Bullet" id="2" name="Set gravity" sid="917012958379245" type="Portal_Ball">
+                                    <param id="0" name="Gravity">0</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="929462249751359" type="System">
+                                    <param id="0" name="Object to create">Portal_Ball</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Tiempoespacio.X</param>
+                                    <param id="3" name="Y">Tiempoespacio.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="132122255487477">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="828822498737754" type="healer">
+                                    <param id="0" name="Object">Portal_2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="559205285635871" type="healer">
+                                    <param id="0" name="Object">Portal1</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="875266515299831">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="130677564236577" type="pulse_color">
+                                    <param id="0" name="Object">Portal_2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="995581215527016" type="pulse_color">
+                                    <param id="0" name="Object">Portal1</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="211181978779360">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="547541747451358" type="tank">
+                                    <param id="0" name="Object">Portal_2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="175210728349356" type="tank">
+                                    <param id="0" name="Object">Portal1</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="126947361317791" title="Reolección Vida">
+                    <sub-events>
+                        <event-block sid="446018861538024">
+                            <conditions>
+                                <condition id="3" name="Is button down" sid="424971234338953" type="Gamepad">
+                                    <param id="0" name="Gamepad">healer.Joystick</param>
+                                    <param id="1" name="Button">2</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="498943065908207" type="healer">
+                                    <param id="0" name="Object">Luz</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="347161049812156" type="System">
+                                    <param id="0" name="Variable">Vida</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="532688395568991" type="Luz">
+                                    <param id="0" name="Height">Luz.Height*1.05</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="222550564346582" type="Luz">
+                                    <param id="0" name="Width">Luz.Width*1.05</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="243397707351280" type="System">
+                                    <param id="0" name="Variable">Vida</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="3" name="Set progress" sid="470265025439968" type="ProgressBar">
+                                    <param id="0" name="Value">Vida</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="662894220399312" title="Movimiento2">
+                    <sub-events>
+                        <event-block any="1" sid="939571130405743">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="126872628951848" type="Gamepad">
+                                    <param id="0" name="Gamepad">Personajes.Joystick</param>
+                                    <param id="1" name="Button">0</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="675112827145034" type="Keyboard">
+                                    <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform2" id="7" name="Simulate control" sid="423257661448576" type="Personajes">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="959293944818169">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="525166268862871" type="Gamepad">
+                                    <param id="0" name="Gamepad">Personajes.Joystick</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">-100</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="714767261531339" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="202434341235761" type="Personajes">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Platform2" id="7" name="Simulate control" sid="543941735886001" type="Personajes">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="930325055422473">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="265172089198894" type="Gamepad">
+                                    <param id="0" name="Gamepad">Personajes.Joystick</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">100</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="665717470904523" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="613874750138954" type="Personajes">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="Platform2" id="7" name="Simulate control" sid="891410972550486" type="Personajes">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="244705012540768" title="Daño enemigos">
+                    <sub-events>
+                        <event-block sid="376596271421356">
+                            <conditions>
+                                <condition id="-5" name="Compare width" sid="412977034062354" type="Luz">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Width">80</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="532680598491570" type="Luz" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="143078236221977">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="918361509930307" type="Personajes">
+                                    <param id="0" name="Object">Enemigos</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="ScrollTo2" id="0" name="Shake" sid="956820611023664" type="Personajes">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="945368020482853" type="System">
+                                    <param id="0" name="Variable">Vida</param>
+                                    <param id="1" name="Value">4</param>
+                                </action>
+                                <action id="3" name="Set progress" sid="629921198640804" type="ProgressBar">
+                                    <param id="0" name="Value">Vida</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="447607664328182">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="577619692520665" type="System">
+                                            <param id="0" name="First value">Personajes.X</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">Enemigos.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform2" id="8" name="Set vector X" sid="764214514657638" type="healer">
+                                            <param id="0" name="Vector X">-800</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="804236931533875">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="225586806187950" type="System">
+                                            <param id="0" name="First value">Personajes.X</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">Enemigos.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform2" id="8" name="Set vector X" sid="533263856134721" type="healer">
+                                            <param id="0" name="Vector X">800</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-block>
+        <event-block sid="445109102200810">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="846691560262432" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="411991641229345">
                     <conditions>
-                        <condition id="6" name="On button pressed" sid="126872628951848" type="Gamepad">
-                            <param id="0" name="Gamepad">Personajes.Joystick</param>
-                            <param id="1" name="Button">0</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="675112827145034" type="Keyboard">
-                            <param id="0" name="Key">65 (A)</param>
+                        <condition id="-5" name="Compare width" sid="544715030020291" type="implo">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Width">500</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform2" id="7" name="Simulate control" sid="423257661448576" type="Personajes">
-                            <param id="0" name="Control">2</param>
+                        <action id="-7" name="Set size" sid="794835673329632" type="implo">
+                            <param id="0" name="Width">implo.Width*1.3</param>
+                            <param id="1" name="Height">implo.Height*1.3</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block any="1" sid="959293944818169">
+                <event-block sid="478696551778786">
                     <conditions>
-                        <condition id="5" name="Compare axis" sid="525166268862871" type="Gamepad">
-                            <param id="0" name="Gamepad">Personajes.Joystick</param>
-                            <param id="1" name="Axis">0</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">-100</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="714767261531339" type="Keyboard">
-                            <param id="0" name="Key">37 (Left arrow)</param>
+                        <condition id="-5" name="Compare width" sid="896403228285577" type="repel">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Width">500</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="7" name="Set mirrored" sid="202434341235761" type="Personajes">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="Platform2" id="7" name="Simulate control" sid="543941735886001" type="Personajes">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block any="1" sid="930325055422473">
-                    <conditions>
-                        <condition id="5" name="Compare axis" sid="265172089198894" type="Gamepad">
-                            <param id="0" name="Gamepad">Personajes.Joystick</param>
-                            <param id="1" name="Axis">0</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">100</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="665717470904523" type="Keyboard">
-                            <param id="0" name="Key">39 (Right arrow)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="7" name="Set mirrored" sid="613874750138954" type="Personajes">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="Platform2" id="7" name="Simulate control" sid="891410972550486" type="Personajes">
-                            <param id="0" name="Control">1</param>
+                        <action id="-7" name="Set size" sid="426220527030038" type="repel">
+                            <param id="0" name="Width">repel.Width*1.03</param>
+                            <param id="1" name="Height">repel.Height*1.03</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-group>
+        </event-block>
     </events>
 </c2eventsheet>
