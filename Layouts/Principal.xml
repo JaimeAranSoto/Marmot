@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Pulse</name>
+    <name>Principal</name>
     <sid>622254181137576</sid>
     <event-sheet>Eventos Pulse</event-sheet>
     <size>
@@ -202,7 +202,7 @@
                     <effect id="grayscale" />
                     <effect-instance type="Grayscale">
                         <parameters>
-                            <intensity>1</intensity>
+                            <intensity>0</intensity>
                         </parameters>
                     </effect-instance>
                 </effect-type>
@@ -537,7 +537,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <speed>3</speed>
+                        <speed>2</speed>
                         <seguir>false</seguir>
                     </instance-variables>
                     <behavior-instances>

@@ -45,12 +45,13 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>Portada</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
-        <prop name="Fullscreen scaling">Low quality</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Orientations">Landscape</prop>
         <prop name="Pause on unfocus">No</prop>
@@ -620,16 +621,12 @@
         </family>
     </families>
     <layout-folder>
-        <layout>Movimientos.xml</layout>
         <layout>Portada.xml</layout>
-        <layout>Pulse.xml</layout>
-        <layout>Tank.xml</layout>
+        <layout>Principal.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Eventos Portada.xml</event-sheet>
         <event-sheet>Eventos Pulse.xml</event-sheet>
-        <event-sheet>Eventos Tank.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="5" />
