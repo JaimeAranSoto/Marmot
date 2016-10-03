@@ -256,6 +256,90 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="TiempoespacioEX" sid="588501596092545">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="TimeStopped" sid="730212796473933" type="boolean" />
+                    <instance-variable name="Cooldown" sid="929423343116442" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Timer" sid="718512516197623">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="485396403975562" speed="5">
+                        <frame duration="1" hotspotX="0.511392" hotspotY="0.547809" original-source="C:\Users\Ignit\Pictures\TS_sinfondo.png">
+                            <image-point name="shoot" x="0.774684" y="0.440239" />
+                            <image-point name="Portal" x="1.15949" y="0.496016" />
+                            <collision-poly>
+                                <point x="0.269554" y="0.126246" />
+                                <point x="0.448018" y="0.00199203" />
+                                <point x="0.735978" y="0.0665959" />
+                                <point x="0.720788" y="0.990056" />
+                                <point x="0.262056" y="0.978128" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="tankEX" sid="761731106828887">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="613045852200723" speed="5">
+                        <frame duration="1" hotspotX="0.479705" hotspotY="0.513158" original-source="C:\Users\samsung\Documents\Desarrollo de Videojuegos\Semestre 2\Taller Inicial de Video Juegos\Nova Assault\proyecto\Marmot\arte\tank\tank.png">
+                            <collision-poly>
+                                <point x="0.0479705" y="0.160088" />
+                                <point x="0.479705" y="0.0811404" />
+                                <point x="0.9631" y="0.225877" />
+                                <point x="0.950185" y="0.513158" />
+                                <point x="0.738007" y="0.97807" />
+                                <point x="0.472325" y="0.975877" />
+                                <point x="0.173432" y="0.984649" />
+                                <point x="0.0147601" y="0.513158" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="pulse_colorEX" sid="767633182123300">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="922881693017468" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\samsung\Documents\Desarrollo de Videojuegos\Semestre 2\Taller Inicial de Video Juegos\Nova Assault\arte\pulse\pulse_color.png">
+                            <image-point name="Imagepoint 1" x="0.826" y="0.362" />
+                            <collision-poly>
+                                <point x="0.289063" y="0.289063" />
+                                <point x="0.316" y="0.085125" />
+                                <point x="0.65875" y="0.08" />
+                                <point x="0.776531" y="0.656532" />
+                                <point x="0.628" y="0.939906" />
+                                <point x="0.404094" y="0.939907" />
+                                <point x="0.281812" y="0.692" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="healerEx" sid="912964606338356">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="227234044550847" speed="5">
+                        <frame duration="1" hotspotX="0.534296" hotspotY="0.460417" original-source="C:\Users\Jaime\Documents\NOVA Assault\Marmot\arte\healer\healer.png">
+                            <collision-poly>
+                                <point x="0.241877" y="0.139583" />
+                                <point x="0.498195" y="0.0458333" />
+                                <point x="0.812274" y="0.108333" />
+                                <point x="0.909747" y="0.5" />
+                                <point x="0.768953" y="0.945834" />
+                                <point x="0.516246" y="0.847917" />
+                                <point x="0.281588" y="0.970833" />
+                                <point x="0.104693" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="coli">
             <object-type name="repel" sid="551355544990104">
@@ -395,7 +479,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="534626062878055" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ignit\Documents\GitHub\Marmot\New Piskel (2)\sprite_0.png">
                         <collision-poly>
                             <point x="1" y="0" />
                             <point x="1" y="1" />
@@ -410,7 +494,18 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="710760154811737" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ignit\Documents\GitHub\Marmot\New Piskel (2)\sprite_1.png">
+                        <collision-poly>
+                            <point x="0.04" y="0.04" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96" y="0.04" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96" y="0.96" />
+                            <point x="0.5" y="1" />
+                            <point x="0.04" y="0.96" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -424,7 +519,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="882622372934732" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ignit\Documents\GitHub\Marmot\New Piskel (3).png">
                         <collision-poly>
                             <point x="1" y="0" />
                             <point x="1" y="1" />
@@ -570,6 +665,10 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground" sid="421832092794286">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Ignit\Documents\GitHub\Marmot\cool-pixel-background-2560x1600.jpg" />
         </object-type>
     </object-folder>
     <families>

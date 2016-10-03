@@ -10,8 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="3">Portada</layout>
         <layout order="0">Principal</layout>
+        <layout active="1" order="3">Portada</layout>
         <event-sheet order="1">Eventos Principal</event-sheet>
         <event-sheet order="2">Eventos Portada</event-sheet>
     </open-tabs>
@@ -28,7 +28,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="object-folder/mapa/" />
-        <folder expanded="0" path="object-folder/Player/" />
+        <folder expanded="1" path="object-folder/Player/" />
         <folder expanded="1" path="object-folder/coli/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
@@ -45,6 +45,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/tank/" />
         <folder expanded="1" path="animation-folder/Tiempoespacio/" />
         <folder expanded="1" path="animation-folder/healer/" />
+        <folder expanded="1" path="animation-folder/TiempoespacioEX/" />
+        <folder expanded="1" path="animation-folder/tankEX/" />
+        <folder expanded="1" path="animation-folder/pulse_colorEX/" />
+        <folder expanded="1" path="animation-folder/healerEx/" />
         <folder expanded="1" path="animation-folder/repel/" />
         <folder expanded="1" path="animation-folder/implo/" />
         <folder expanded="1" path="animation-folder/Bubu/" />
