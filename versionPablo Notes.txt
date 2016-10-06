@@ -2,3 +2,25 @@ Pinte a la Pulse
 Agrande al Tank
 Quite los controles por teclado
 _______________________________________________
+General:
+	+ set Hp del monstruo en 10
+	+ ajuste las bounding box de los personajes para que no escalasen muros
+	+ cree algunos grupos y subgrupos para organizar un poco el proyecto
+
+Funcion Ataque del Samurai:
+
+	+ cambio en every tick y comportamiento de monstruos para esta funcion
+	
+	+ Ataque activado con un costo de real de unos 15 de hp
+	+ Daño 10 a los monstuos
+
+Cambios en la Pulse:
+	
+	Cambios en la personaje y en el comportamiento de la bola y la Bola de colisiones speed y apariencia,
+
+	+ la bola ya no se detiene un sec despues de llegar al objetivo sino que se devuelve
+	  inmediatamente
+	+ se activa el movimiento con /r1 al presionar, si mantenemos r1 la pulse se queda quieta, al llegar 
+	  a determinada distancia se devuelve o al apretar "Boton de Accion"
+
+______________________________________________
