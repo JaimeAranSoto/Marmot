@@ -1,0 +1,6 @@
+Se implementó un tilemap para uniformizar el escenario.
+Se mantienen colisionadores aparte, con el fin de controlar más el mapa.
+-Se mejoran elementos visuales: Bola de portal y bola de vida.
+-Se acomoda el parámetro salto para que tenga sentido con los nuevos tamaños de mapa.
+-Se elimina un evento innecesario donde el Healer se movía despues de que algún enemigo atacase a cualquier jugador.
+-Se agrega la posibilidad de controlar al cuarto jugador mediante el teclado.
