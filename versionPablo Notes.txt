@@ -1,5 +1,5 @@
-Pinte a la Pulse
-Agrande al Tank
+Recolorear a la Pulse
+aumentar tamaño al Tank
 Quite los controles por teclado
 _______________________________________________
 General:
@@ -24,3 +24,36 @@ Cambios en la Pulse:
 	  a determinada distancia se devuelve o al apretar "Boton de Accion"
 
 ______________________________________________
+
+Agregados Ataques Basicos y Cambios en los Monstruos
+
+General:
+
+	+ Efectos de daño en Monstruos Sangre depende ataque recibido
+
+Personajes:
+	Se agrego el ataque basico de cada personaje de la siguiente manera:
+
+		+Samurai:
+			Se activa al apretar
+			Crea un Sprite Animado que se posiciona en el punto 1 del Samurai y se destruye al terminar
+			su Animacion, con un delay pequeño.
+
+		+Breaker:
+			Se activa al mantener press
+			Crea Una bullet en el punto de disparo con un delay medio con daño 2
+
+		+Pulse:
+			se activa al apretar
+			Crea una bullet en un punto de disparo con un delay alto con daño 2
+			La pulse no se puede mover mientras dispara (plat max.speed 0 / ignore input)
+
+		+ Tank:
+			(preferiria hacerlo con bullet mas adelante por la collision con solidos)
+			
+			Se activa al mantener press
+			Un sprite invisible permanente frente suyo
+			Se activa visibilidad y colision
+			se desactiva al soltar
+
+
