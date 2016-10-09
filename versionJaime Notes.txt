@@ -4,3 +4,15 @@ Se mantienen colisionadores aparte, con el fin de controlar más el mapa.
 -Se acomoda el parámetro salto para que tenga sentido con los nuevos tamaños de mapa.
 -Se elimina un evento innecesario donde el Healer se movía despues de que algún enemigo atacase a cualquier jugador.
 -Se agrega la posibilidad de controlar al cuarto jugador mediante el teclado.
+--------------------------
+08/10
+-Se implementan animaciones de Tanque y Breaker.
+-Se cambia el fondo a un Tiled Backround.
+-Se mejora la atraccion del pulso.
+-Se cambia debug de controles a flechas del teclado.
+-Se añade ataque básico de todos los personajes con sus respectivos sprites y cooldown (RB)
+-Se aumenta el tiempo detenido de 1 a 1.5 segundos.
+-Se arregla el mapa.
+-Se mejoran los tamaños de los personajes para que no pasen por la compuerta.
+-Sprites de los portales, fade de los personajes cuando entran.
+-Hola Pancho como estás.
