@@ -16,3 +16,10 @@ Se mantienen colisionadores aparte, con el fin de controlar más el mapa.
 -Se mejoran los tamaños de los personajes para que no pasen por la compuerta.
 -Sprites de los portales, fade de los personajes cuando entran.
 -Hola Pancho como estás.
+-----
+10/10 IGN
+-Se añaden sprites de special y básico del tanke.
+-Se mejoran algunos eventos
+-Se reduce salto de 650>600
+-Se eliminan behaviors innecesarios.
+-Eso
