@@ -22,4 +22,8 @@ Se mantienen colisionadores aparte, con el fin de controlar más el mapa.
 -Se mejoran algunos eventos
 -Se reduce salto de 650>600
 -Se eliminan behaviors innecesarios.
--Eso
+22/10
+-Se añade layout de instrucciones, faltan algunos lores.
+-Se implementan plugins rex_textscroll y rex_moveTo
+-Mejoras en la portada
+-Se eliminan objetos innecesarios
