@@ -27,3 +27,16 @@ Se mantienen colisionadores aparte, con el fin de controlar más el mapa.
 -Se implementan plugins rex_textscroll y rex_moveTo
 -Mejoras en la portada
 -Se eliminan objetos innecesarios
+23/10
+-La esfera ahora se posiciona automáticamente al lado del personaje
+-Se mejoraron las colisiones de la accion de tomar aliados.
+-Se implementa mecánica prototipo de sacrificio (->Ignacio)
+24/10
+-Se implementa menu funcional que redirige a Principal o a Personajes.
+26/10
+-Se mejora un error de Github causado por conflictos de archivo.
+-Se agregar sprite de Sckoopy
+27/10
+-Se implementa escenario Single
+-Se mejoran efectos visuales
+-Se añade habilidad embestida de Tanque
