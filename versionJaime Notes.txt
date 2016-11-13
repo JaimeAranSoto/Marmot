@@ -40,3 +40,8 @@ Se mantienen colisionadores aparte, con el fin de controlar más el mapa.
 -Se implementa escenario Single
 -Se mejoran efectos visuales
 -Se añade habilidad embestida de Tanque
+13/11
+-¡#!Se eliminan Pulse y Samurai
+-Se crea nivel tutorial (50%)
+-Se corrige un problema al llevar al por un portal cuando llevaba jugadores.
+-Se añade familia botones.
