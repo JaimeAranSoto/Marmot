@@ -45,3 +45,9 @@ Se mantienen colisionadores aparte, con el fin de controlar más el mapa.
 -Se crea nivel tutorial (50%)
 -Se corrige un problema al llevar al por un portal cuando llevaba jugadores.
 -Se añade familia botones.
+26/11
+-Se optimiza ordenamiento de eventos, divide y conquista!
+-Se agregan elementos gráficos como polvo, estallidos, indicadores de daño, etc.
+-Se cambia el ataque básico del tanque por elementos Bullet individuales.
+-Se mejoran algunos tiles
+-Se cambia logo de Loading...
