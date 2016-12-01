@@ -26,3 +26,20 @@ Cambios en la Pulse:
 ______________________________________________
 
 + Agregado nivel 05
+______________________________________________
+
+
+01/12
+
+Valkyrie v0.1:
+
+	+ se agrego al valkyrie con 3 nuevas habilidades:
+		+ (X) recuperar Salud del Equipo (no implementado por eventos)
+		+ (Y) explotar escudo
+		+ (R2) Crear escudo de paralisis a costo de salud grupal (no implementado en eventos)
+
+	+ animaciones básicas completas
+	+ se cambio sprite de Repulsion de la pulso por el de paralisis del tank.
+
+Tank:
+	+ se cambio sprite de paralisis por el repulsión del Pulso para coherencia con "congelar"
